@@ -34,17 +34,21 @@ AUDIO_DIR = DOCS_DIR / "audio"
 HISTORY_FILE = DATA_DIR / "history.json"
 HTML_OUTPUT = DOCS_DIR / "index.html"
 
-# Feed RSS finanziari (IT + Internazionali)
+# Feed RSS finanziari (IT + Internazionali + Settoriali/Commodities/Emergenti)
 RSS_FEEDS = {
     "Il Sole 24 Ore - Finanza": "https://www.ilsole24ore.com/rss/finanza.xml",
     "Il Sole 24 Ore - Economia": "https://www.ilsole24ore.com/rss/economia.xml",
     "Milano Finanza": "https://www.milanofinanza.it/rss",
     "ANSA Economia": "https://www.ansa.it/sito/notizie/economia/economia_rss.xml",
+    "ANSA Mondo & Geopolitica": "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",
     "Reuters Business": "https://news.google.com/rss/search?q=site:reuters.com+markets+OR+finance&hl=en-US&gl=US&ceid=US:en",
+    "Bloomberg Markets": "https://feeds.bloomberg.com/markets/news.rss",
     "Financial Times": "https://www.ft.com/rss/home",
+    "Morningstar": "https://news.google.com/rss/search?q=site:morningstar.it+OR+site:morningstar.com+ETF+OR+markets&hl=it&gl=IT&ceid=IT:it",
     "CNBC Top News": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
     "MarketWatch Top Stories": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
-    "Yahoo Finance": "https://finance.yahoo.com/news/rssindex",
+    "Oro & Commodities": "https://news.google.com/rss/search?q=gold+price+OR+bullion+OR+central+bank+gold+markets&hl=en-US&gl=US&ceid=US:en",
+    "Mercati Emergenti": "https://news.google.com/rss/search?q=emerging+markets+OR+China+economy+OR+BRICS+markets&hl=en-US&gl=US&ceid=US:en",
     "Investing.com Italia": "https://it.investing.com/rss/news.rss",
 }
 
@@ -53,28 +57,54 @@ RSS_FEEDS = {
 # ==========================================
 class TopicSlide(BaseModel):
     category: str = Field(
-        description="Categoria: Macro & Banche Centrali, Azionario, Materie Prime & Valute, oppure Italia & Europa"
+        description=(
+            "Usa esattamente una di queste 7 categorie nell'ordine indicato: "
+            "1. Tema del Giorno, "
+            "2. Macro, Tassi & Geopolitica, "
+            "3. Azionario Globale, "
+            "4. Rotazione & Focus Settori, "
+            "5. Oro & Materie Prime, "
+            "6. Mercati Emergenti, "
+            "7. Focus Italia"
+        )
     )
-    headline: str = Field(description="Titolo sintetico e d'impatto della notizia/tema (max 12 parole)")
-    key_takeaway: str = Field(description="Impatto pratico sui mercati in 1 frase chiara")
-    bullets: list[str] = Field(description="2-4 punti elenco concreti con dati, livelli o dettagli rilevanti")
-    sources: list[str] = Field(
-        description="Nomi delle testate da cui proviene la notizia (es. ['Financial Times', 'Il Sole 24 Ore'])"
+    headline: str = Field(description="Titolo sintetico e d'impatto (max 12 parole)")
+    key_takeaway: str = Field(
+        description="Impatto concreto sul portafoglio (azionario globale, settori, oro, emergenti o cambio EUR/USD) in 1 frase"
     )
+    bullets: list[str] = Field(description="2-4 punti elenco con dati numerici, livelli o fatti concreti")
+    sources: list[str] = Field(description="Nomi delle testate da cui proviene la notizia")
 
 class DailyReport(BaseModel):
-    day_headline: str = Field(description="Titolo generale della giornata finanziaria (max 10 parole)")
+    day_headline: str = Field(
+        description="Titolo generale della giornata finanziaria centrato sulla macro-evidenza principale (max 10 parole)"
+    )
     market_sentiment: str = Field(description="Una parola: Risk-On, Risk-Off, Cauto, o Misto")
-    slides: list[TopicSlide] = Field(description="Da 4 a 6 schede tematiche ordinate per importanza")
+    slides: list[TopicSlide] = Field(
+        description=(
+            "Esattamente 7 schede in questo ordine fisso: "
+            "1) Tema del Giorno (la macro-evidenza principale che muove i mercati), "
+            "2) Macro, Tassi & Geopolitica (banche centrali, tassi d'interesse, inflazione, politica estera e cambio EUR/USD), "
+            "3) Azionario Globale (USA, Europa e listini sviluppati), "
+            "4) Rotazione & Focus Settori (settori migliori e peggiori della seduta: Tech/AI, Banche, Energia, Difesa, Healthcare, Lusso/Consumi), "
+            "5) Oro & Materie Prime (andamento oro, tassi reali e beni rifugio), "
+            "6) Mercati Emergenti (Cina, Asia, America Latina, dazi e impatto del dollaro), "
+            "7) Focus Italia (Piazza Affari, spread/BTP ed economia italiana)."
+        )
+    )
     podcast_script: str = Field(
         description=(
-            "Monologo fluido in italiano per un briefing audio mattutino di circa 3-4 minuti da ascoltare in auto, "
+            "Monologo fluido in italiano per un briefing audio mattutino di circa 4-5 minuti da ascoltare in auto, "
             "letto da un unico conduttore. "
-            "Apri salutando l'ascoltatore e citando esplicitamente le fonti principali consultate oggi. "
-            "Usa un tono giornalistico naturale, frasi ben ritmate, punteggiatura curata per le pause e transizioni scorrevoli tra un argomento e l'altro. "
-            "NON inserire nomi di personaggi o speaker (niente 'Marco:', 'Anna:', ecc.), NON usare elenchi puntati, asterischi, simboli o tag. "
-            "Scrivi sigle e numeri esattamente come si pronunciano "
-            "(es. 'S and P cinquecento', 'Banca Centrale Europea', 'più zero virgola cinque percento')."
+            "Struttura narrativa obbligatoria: "
+            "1) Saluto iniziale e citazione delle principali fonti consultate oggi; "
+            "2) La macro-evidenza del giorno (il fatto principale che domina i mercati); "
+            "3) Quadro macroeconomico, tassi d'interesse, geopolitica, politica estera e cambio euro-dollaro; "
+            "4) Analisi del portafoglio globale: listini mondiali sviluppati e focus sui settori che guidano o frenano il mercato; "
+            "5) Oro e mercati emergenti; "
+            "6) Chiusura rapida dedicata all'Italia. "
+            "NON inserire nomi di speaker (niente 'Marco:', 'Anna:', ecc.), NON usare elenchi puntati, asterischi o simboli. "
+            "Scrivi sigle e numeri come si pronunciano (es. 'S and P cinquecento', 'Banca Centrale Europea', 'euro dollaro')."
         )
     )
 
@@ -98,7 +128,7 @@ def fetch_recent_news(hours_lookback: int = 20) -> tuple[str, list[str]]:
             feed = feedparser.parse(resp.content)
             count = 0
             for entry in feed.entries:
-                if count >= 10:
+                if count >= 8:
                     break
                 pub_str = entry.get("published") or entry.get("updated")
                 if pub_str:
@@ -117,7 +147,7 @@ def fetch_recent_news(hours_lookback: int = 20) -> tuple[str, list[str]]:
                     continue
                 seen.add(key)
 
-                summary = clean_html(entry.get("summary", entry.get("description", "")))[:280]
+                summary = clean_html(entry.get("summary", entry.get("description", "")))[:260]
                 articles.append(f"[{source}] {title}: {summary}")
                 count += 1
 
@@ -139,13 +169,21 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
     sources_str = ", ".join(active_sources)
 
     prompt = f"""
-    Sei un analista finanziario senior e conduttore di un briefing mattutino per investitori.
+    Sei un analista finanziario senior e conduttore di un briefing mattutino pensato per un investitore europeo
+    con un portafoglio core diversificato su Azionario Globale (Developed Markets), Oro e Mercati Emergenti.
     Data di oggi: {date_label}.
     Fonti consultate oggi: {sources_str}.
 
-    Analizza le notizie raccolte, elimina duplicati e rumore di fondo, e crea:
-    1. Una presentazione strutturata in schede tematiche (chiare, ricche di numeri e livelli chiave), indicando per ogni scheda le testate di origine nel campo 'sources'.
-    2. Un monologo audio fluido e naturale per un singolo conduttore da ascoltare in auto, aprendo con un saluto e citando brevemente le fonti consultate oggi ({sources_str}).
+    Analizza le notizie raccolte, elimina il rumor speculativo di breve periodo su titoli minori, e costruisci:
+    1. Le 7 schede tematiche nell'ordine esatto richiesto:
+       - Tema del Giorno (la macro-evidenza principale)
+       - Macro, Tassi & Geopolitica (banche centrali, tassi, politica estera, geopolitica e cambio EUR/USD)
+       - Azionario Globale (andamento listini sviluppati USA/Europa)
+       - Rotazione & Focus Settori (quali settori stanno sovraperformando o soffrendo: Tech/AI, Finanziari, Energia, Difesa, Healthcare, Consumi)
+       - Oro & Materie Prime (driver su oro, tassi reali e beni rifugio)
+       - Mercati Emergenti (Cina, Asia, emergenti, dazi e impatto del dollaro)
+       - Focus Italia (Piazza Affari, BTP/spread ed economia italiana)
+    2. Lo script audio monologo per un singolo conduttore seguendo esattamente lo stesso filo logico, aprendo con la macro-evidenza del giorno e citando le fonti consultate ({sources_str}), passando poi a macro/tassi/geopolitica, azionario globale e focus sui settori, oro ed emergenti, e chiudendo con l'Italia.
 
     NOTIZIE:
     {news_text}
@@ -456,7 +494,7 @@ def update_history_and_html(
 
       const sourcesContainer = document.getElementById("sourcesContainer");
       const sourcesList = item.active_sources || [
-        "Il Sole 24 Ore", "Milano Finanza", "ANSA Economia", "Reuters", "Financial Times", "CNBC", "MarketWatch"
+        "Il Sole 24 Ore", "Milano Finanza", "ANSA Economia", "Reuters", "Bloomberg", "Financial Times", "Morningstar"
       ];
       sourcesContainer.innerHTML = sourcesList.map(s => `<span class="source-pill">${{s}}</span>`).join("");
 
