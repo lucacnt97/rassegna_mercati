@@ -1,4 +1,5 @@
 import os
+import time
 import re
 import json
 import html
@@ -144,37 +145,37 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
     {news_text}
     """
 
-    allowed_prefixes = ("gemini-2.5-flash", "gemini-2.0-flash", "gemini-3.5-flash")
-    available_flash = [
-        m.name.replace("models/", "")
-        for m in client.models.list()
-        if any(m.name.replace("models/", "").startswith(p) for p in allowed_prefixes)
-        and "image" not in m.name.lower()
-        and "audio" not in m.name.lower()
-        and "tts" not in m.name.lower()
+    # Priorità ai modelli Flash gratuiti attuali (3.8 e 3.5)
+    candidates = [
+        "gemini-3.8-flash",
+        "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
     ]
-    available_flash.sort(reverse=True)
-    candidates = available_flash or ["gemini-2.5-flash", "gemini-2.0-flash"]
 
     last_err = None
-    for model_name in candidates:
-        try:
-            print(f"   Tentativo con modello: {model_name}")
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=DailyReport,
-                    temperature=0.3,
-                ),
-            )
-            return DailyReport.model_validate_json(response.text)
-        except Exception as e:
-            print(f"   Modello {model_name} non disponibile ({e}), passo al successivo...")
-            last_err = e
+    # Esegue fino a 3 cicli completi con pausa in caso di 503 (high demand temporaneo)
+    for attempt in range(3):
+        for model_name in candidates:
+            try:
+                print(f"   Tentativo {attempt + 1} con modello: {model_name}")
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=DailyReport,
+                        temperature=0.3,
+                    ),
+                )
+                return DailyReport.model_validate_json(response.text)
+            except Exception as e:
+                print(f"   Modello {model_name} non disponibile ({e})")
+                last_err = e
+                time.sleep(4)
+        time.sleep(10)
 
-    raise RuntimeError(f"Nessun modello Gemini Flash disponibile: {last_err}")
+    raise RuntimeError(f"Nessun modello Gemini Flash disponibile dopo i retry: {last_err}")
+
 
 # ==========================================
 # 3. GENERAZIONE AUDIO MP3
