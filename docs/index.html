@@ -12,9 +12,6 @@
       --text: #e6edf3;
       --muted: #8b949e;
       --accent: #58a6ff;
-      --green: #3fb950;
-      --red: #f85149;
-      --amber: #d29922;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -54,7 +51,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .player-top {
       display: flex;
@@ -66,6 +63,30 @@
     }
     audio { width: 100%; height: 42px; margin-top: 6px; }
     .speed-btns button { padding: 4px 10px; font-size: 0.8rem; }
+    .sources-banner {
+      background: rgba(88, 166, 255, 0.08);
+      border: 1px solid rgba(88, 166, 255, 0.28);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 0.88rem;
+      color: #c9d1d9;
+    }
+    .sources-banner strong { color: var(--accent); }
+    .source-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .source-pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: var(--text);
+    }
     .hero {
       margin-bottom: 20px;
       padding: 16px;
@@ -95,13 +116,24 @@
       border-radius: 12px;
       padding: 18px;
     }
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
     .slide-cat {
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--accent);
       font-weight: 700;
-      margin-bottom: 6px;
+    }
+    .slide-src {
+      font-size: 0.75rem;
+      color: var(--muted);
     }
     .slide-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
     .takeaway {
@@ -141,6 +173,11 @@
       <audio id="audioPlayer" controls preload="metadata"></audio>
     </div>
 
+    <div class="sources-banner">
+      <strong>📰 Fonti consultate per questa rassegna:</strong>
+      <div class="source-pills" id="sourcesContainer"></div>
+    </div>
+
     <div class="hero">
       <span class="badge" id="sentimentBadge"></span>
       <h2 id="dayHeadline"></h2>
@@ -156,7 +193,7 @@
   </div>
 
   <script>
-    const HISTORY = [{"date": "2026-11-23", "date_label": "23/11/2026", "audio_path": "audio/2026-11-23.mp3", "day_headline": "Effetto Nvidia spinge i listini tech, Brent sotto novanta dollari", "market_sentiment": "Risk-On", "slides": [{"category": "Azionario", "headline": "Nvidia balza del 30% con il reingresso del CEO Jensen Huang", "key_takeaway": "Il ritorno di Huang riaccende la fiducia sul comparto dei semiconduttori e trascina al rialzo l'intero settore tecnologico.", "bullets": ["Reintegro lampo di Jensen Huang come presidente e amministratore delegato dopo soli undici giorni dalla sua uscita.", "Il titolo Nvidia guadagna oltre il trenta percento al Nasdaq, registrando uno dei maggiori rialzi dell'ultimo decennio.", "CrowdStrike annuncia l'acquisizione di Zscaler con una transazione azionaria da circa quarantaquattro miliardi di dollari."]}, {"category": "Macro & Banche Centrali", "headline": "PIL statunitense stimato al 3% nel quarto trimestre 2026", "key_takeaway": "La domanda dei consumatori negli Stati Uniti mostra resilienza sostenendo le prospettive di crescita a fine anno.", "bullets": ["Stime di S&P Global indicano un'espansione dell'economia americana al tre percento su base annua nel finale di esercizio.", "JPMorgan testa transazioni finanziarie automatizzate gestite da agenti d'intelligenza artificiale senza intervento umano.", "Sotto pressione i titoli delle assicurazioni sanitarie americane per la revisione delle valutazioni Medicare Advantage."]}, {"category": "Materie Prime & Valute", "headline": "Petrolio Brent sotto novanta dollari e dollaro in rafforzamento", "key_takeaway": "La flessione dei prezzi energetici attenua le pressioni inflazionistiche, mentre l'euro arretra a 1,09 sul dollaro.", "bullets": ["Prezzo del greggio Brent in calo al di sotto dei novanta dollari al barile sui mercati internazionali.", "Rafforzamento del dollaro americano che spinge il cambio Euro/Dollaro al ribasso a quota uno virgola zero nove.", "Sconti mirati della grande distribuzione americana per stimolare i consumi in vista delle festività."]}, {"category": "Italia & Europa", "headline": "Milano positiva nonostante i dividendi, Lego investe in Portogallo", "key_takeaway": "Piazza Affari assorbe lo stacco delle cedole e chiude in rialzo dello 0,65%.", "bullets": ["Indice FTSE MIB a più zero virgola sessantacinque percento nonostante il peso dello stacco dividendi per l'uno virgola quarantuno percento.", "Lego annuncia un investimento di un miliardo di dollari per la costruzione di una nuova fabbrica in Portogallo.", "Julius Baer segna un utile record ma delude sui nuovi flussi netti, scesi a otto virgola cinque miliardi di franchi svizzeri."]}], "podcast_script": "Buongiorno e benvenuti al nostro appuntamento quotidiano con i mercati finanziari. Oggi ventitré novembre duemilaventisei assistiamo a una giornata dominata dal forte ottimismo sul settore tecnologico globale, guidata dal clamoroso ritorno di Jensen Huang alla guida di Nvidia. Il consiglio di amministrazione del colosso dei microchip ha infatti reintegrato Huang come presidente e amministratore delegato soltanto undici giorni dopo la sua uscita. La notizia ha scatenato un forte rally a Wall Street, con il titolo Nvidia arrivato a guadagnare oltre il trenta percento. L'effetto si è riflesso su tutto il comparto tecnologico, rassicurando gli investitori sulla continuità strategica nello sviluppo dell'intelligenza artificiale. Sempre nel settore tecnologico si segnala un'operazione da record: CrowdStrike ha annunciato l'acquisizione di Zscaler per un valore di circa quarantatré virgola nove miliardi di dollari interamente in azioni. Sul fronte bancario, JPMorgan sta sviluppando transazioni finanziarie gestite da agenti di intelligenza artificiale capaci di operare senza intervento umano. Passando allo scenario macroeconomico, gli ultimi indicatori segnalano una solida tenuta degli Stati Uniti, con stime di crescita del prodotto interno lordo intorno al tre percento per il quarto trimestre, sostenute dalla resilienza dei consumi. Sul fronte delle materie prime, il petrolio Brent scende sotto la soglia dei novanta dollari al barile, offrendo un leggero respiro alle pressioni inflazionistiche. Il dollaro guadagna terreno, spingendo il cambio con l'euro verso quota uno virgola zero nove. In Europa la seduta si chiude con segnali positivi. Piazza Affari registra un rialzo dello zero virgola sessantacinque percento, un risultato particolarmente solido se si considera che la giornata ha visto lo stacco delle cedole per nove grandi società, con un impatto stimato nell'uno virgola quarantuno percento sull'indice principale. Tra le storie societarie del continente si evidenzia la mossa di Lego, che ha annunciato un investimento da un miliardo di dollari per un nuovo sito produttivo in Portogallo. A Zurigo, il gruppo bancario Julius Baer presenta un quadro contrastato: nonostante un utile netto record nei primi dieci mesi dell'anno, la banca ha registrato afflussi netti pari a otto virgola cinque miliardi di franchi svizzeri, un dato inferiore alle aspettative degli analisti. I mercati iniziano dunque la settimana con un ritrovato propensione al rischio, sostenuti dai grandi colossi tech. Per questo briefing è tutto, vi auguro una proficua giornata e buon lavoro."}];
+    const HISTORY = [{"date": "2026-11-23", "date_label": "23/11/2026", "audio_path": "audio/2026-11-23.mp3", "day_headline": "Ritorno di Huang spinge i tech, ma pesano incertezze macro", "market_sentiment": "Risk-On", "active_sources": ["Il Sole 24 Ore - Finanza", "Il Sole 24 Ore - Economia", "ANSA Economia", "Reuters Business", "Financial Times", "CNBC Top News", "MarketWatch Top Stories", "Investing.com Italia"], "slides": [{"category": "Azionario", "headline": "Ritorno di Jensen Huang alla guida di Nvidia: rally sui tech", "key_takeaway": "Il reintegro del CEO alla guida di Nvidia riaccende l'entusiasmo degli investitori sul settore tecnologico globale.", "bullets": ["Nvidia guadagna oltre il 30% a Wall Street dopo la reintegrazione del co-fondatore.", "Wall Street e borse europee in forte rialzo trascinate dall'effetto intelligenza artificiale.", "Gli analisti di Wedbush ritengono che la mossa metta un punto fermo alle vendite sul settore."], "sources": ["Il Sole 24 Ore - Finanza", "Financial Times", "Reuters Business", "CNBC Top News", "MarketWatch Top Stories", "Investing.com Italia"]}, {"category": "Italia & Europa", "headline": "Piazza Affari giù per dividendi; Goldman frena su Pil italiano", "key_takeaway": "Milano cede terreno a causa dello stacco cedole mentre Goldman Sachs riduce le stime di crescita dell'Italia.", "bullets": ["Milano cede lo 0,64% per lo stacco cedole di 9 big che ha impattato per l'1,41%.", "Goldman Sachs prevede crescita italiana allo 0,8% nel 2026 e 0,5% nel 2027.", "Studio Bce rileva che le imprese italiane affrontano ostacoli finanziari doppi rispetto ai Paesi del Nord."], "sources": ["Il Sole 24 Ore - Finanza", "ANSA Economia"]}, {"category": "Materie Prime & Valute", "headline": "Oro in ripresa sopra il 2%, petrolio Brent in calo", "key_takeaway": "L'oro approfitta della pausa del dollaro per rimbalzare, mentre il petrolio scende sotto i 90 dollari.", "bullets": ["Prezzo del Brent in flessione al di sotto dei 90 dollari al barile.", "Quotazioni dell'oro in rialzo di oltre il 2% grazie al rallentamento del biglietto verde.", "L'euro si indebolisce nei confronti del dollaro toccando quota 1,09."], "sources": ["Il Sole 24 Ore - Finanza", "Reuters Business", "ANSA Economia"]}, {"category": "Macro & Banche Centrali", "headline": "Francia valuta regola aurea in Costituzione per frenare la spesa", "key_takeaway": "Macron propone vincoli costituzionali sui conti pubblici di fronte al rischio di stime di crescita inferiori alle attese.", "bullets": ["Proposta di riforma costituzionale per fissare un tetto alla spesa pubblica francese.", "Ministro delle Finanze avverte sul rischio di taglio della stima del Pil 2027 attualmente all'1%.", "Crescono le preoccupazioni della Bce sui divari finanziari interni all'Eurozona."], "sources": ["Financial Times", "Reuters Business"]}, {"category": "Azionario", "headline": "CrowdStrike acquisisce Zscaler per 44 miliardi nel settore cyber", "key_takeaway": "Mega fusione interamente azionaria nella cybersecurity per creare un gigante integrato contro le minacce informatiche.", "bullets": ["Operazione da 44 miliardi di dollari interamente in azioni per far fronte all'aumento degli attacchi informatici.", "Forte domanda nel settore software nonostante la volatilità dei mercati azionari.", "Nel settore pharma Novartis frena gli entusiasmi di chi prevede una cura rapida per il cancro tramite intelligenza artificiale."], "sources": ["Financial Times"]}], "podcast_script": "MARCO: Buongiorno e benvenuti al nostro briefing finanziario di oggi, lunedì ventitré novembre duemilaventisei. Oggi abbiamo analizzato per voi le notizie di Il Sole Ventiquattr'Ore Finanza, Il Sole Ventiquattr'Ore Economia, ANSA Economia, Reuters Business, Financial Times, CNBC Top News, MarketWatch Top Stories e Investing punto com Italia. Ciao Elena, giornata piena di colpi di scena sui mercati. ELENA: Ciao Marco e buongiorno a tutti. La notizia della giornata è senza dubbio il clamoroso ritorno di Jensen Huang alla guida di Nvidia come presidente e amministratore delegato. Il consiglio di amministrazione ha fatto un passo indietro e i mercati hanno risposto con un rally spettacolare. MARCO: Esatto, le azioni Nvidia sono volate di oltre il trenta percento sul listino americano e l'effetto positivo ha spinto al rialzo l'indice S and P cinquecento, il Nasdaq e i listini europei. Gli analisti di Wall Street vedono questo reintegro come un segnale di stabilizzazione per tutto il comparto dell'intelligenza artificiale. ELENA: Passando all'Europa e all'Italia, a Piazza Affari l'indice principale ha chiuso in calo dello zero virgola sessantaquattro percento, ma l'effetto è dovuto solo allo stacco cedole di nove grandi società che ha pesato per l'uno virgola quarantuno percento. Sul fronte macro, Goldman Sachs ha ridotto le stime di crescita per il nostro Paese allo zero virgola otto percento quest'anno e allo zero virgola cinque percento nel duemilasette. MARCO: Inoltre, uno studio della Banca Centrale Europea evidenzia che le imprese italiane affrontano ostacoli di credito doppi rispetto a quelle del Nord Europa, rilanciando la necessità di un'Unione dei mercati dei capitali. In Francia intanto, il presidente Macron ha proposto di inserire una regola aurea di bilancio in Costituzione per limitare la spesa pubblica. ELENA: Diamo un'occhiata a valute e materie prime, Marco. Il petrolio Brent è sceso sotto i novanta dollari al barile, mentre l'oro ha registrato un balzo di oltre il due percento grazie alla pausa del rally del dollaro. L'euro resta invece debole attorno a uno virgola zero nove sul dollaro. MARCO: Da segnalare infine una maxi operazione nel settore tecnologico, con CrowdStrike che ha annunciato l'acquisizione di Zscaler per quarantaquattro miliardi di dollari in azioni, creando un colosso senza precedenti nella sicurezza informatica. ELENA: Una mossa strategica di grande impatto. Per oggi è tutto, buon viaggio e buona giornata a tutti gli ascoltatori."}];
     const dateSelect = document.getElementById("dateSelect");
     const audioPlayer = document.getElementById("audioPlayer");
 
@@ -175,14 +212,24 @@
       document.getElementById("dayDateLabel").textContent = item.date_label;
       audioPlayer.src = item.audio_path;
 
+      const sourcesContainer = document.getElementById("sourcesContainer");
+      const sourcesList = item.active_sources || [
+        "Il Sole 24 Ore", "Milano Finanza", "ANSA Economia", "Reuters", "Financial Times", "CNBC", "MarketWatch"
+      ];
+      sourcesContainer.innerHTML = sourcesList.map(s => `<span class="source-pill">${s}</span>`).join("");
+
       const container = document.getElementById("slidesContainer");
       container.innerHTML = "";
       item.slides.forEach((slide, i) => {
         const card = document.createElement("div");
         card.className = "slide-card";
         const bulletsHtml = slide.bullets.map(b => `<li>${b}</li>`).join("");
+        const srcTag = (slide.sources && slide.sources.length) ? `Fonti: ${slide.sources.join(", ")}` : "";
         card.innerHTML = `
-          <div class="slide-cat">Slide ${i + 1}/${item.slides.length} • ${slide.category}</div>
+          <div class="slide-header">
+            <span class="slide-cat">Slide ${i + 1}/${item.slides.length} • ${slide.category}</span>
+            <span class="slide-src">${srcTag}</span>
+          </div>
           <h3>${slide.headline}</h3>
           <div class="takeaway"><strong>Impatto:</strong> ${slide.key_takeaway}</div>
           <ul>${bulletsHtml}</ul>
