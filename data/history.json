@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2026-11-23",
+    "date_label": "23/11/2026",
+    "audio_path": "audio/2026-11-23.mp3",
+    "day_headline": "Effetto Nvidia spinge i listini tech, Brent sotto novanta dollari",
+    "market_sentiment": "Risk-On",
+    "slides": [
+      {
+        "category": "Azionario",
+        "headline": "Nvidia balza del 30% con il reingresso del CEO Jensen Huang",
+        "key_takeaway": "Il ritorno di Huang riaccende la fiducia sul comparto dei semiconduttori e trascina al rialzo l'intero settore tecnologico.",
+        "bullets": [
+          "Reintegro lampo di Jensen Huang come presidente e amministratore delegato dopo soli undici giorni dalla sua uscita.",
+          "Il titolo Nvidia guadagna oltre il trenta percento al Nasdaq, registrando uno dei maggiori rialzi dell'ultimo decennio.",
+          "CrowdStrike annuncia l'acquisizione di Zscaler con una transazione azionaria da circa quarantaquattro miliardi di dollari."
+        ]
+      },
+      {
+        "category": "Macro & Banche Centrali",
+        "headline": "PIL statunitense stimato al 3% nel quarto trimestre 2026",
+        "key_takeaway": "La domanda dei consumatori negli Stati Uniti mostra resilienza sostenendo le prospettive di crescita a fine anno.",
+        "bullets": [
+          "Stime di S&P Global indicano un'espansione dell'economia americana al tre percento su base annua nel finale di esercizio.",
+          "JPMorgan testa transazioni finanziarie automatizzate gestite da agenti d'intelligenza artificiale senza intervento umano.",
+          "Sotto pressione i titoli delle assicurazioni sanitarie americane per la revisione delle valutazioni Medicare Advantage."
+        ]
+      },
+      {
+        "category": "Materie Prime & Valute",
+        "headline": "Petrolio Brent sotto novanta dollari e dollaro in rafforzamento",
+        "key_takeaway": "La flessione dei prezzi energetici attenua le pressioni inflazionistiche, mentre l'euro arretra a 1,09 sul dollaro.",
+        "bullets": [
+          "Prezzo del greggio Brent in calo al di sotto dei novanta dollari al barile sui mercati internazionali.",
+          "Rafforzamento del dollaro americano che spinge il cambio Euro/Dollaro al ribasso a quota uno virgola zero nove.",
+          "Sconti mirati della grande distribuzione americana per stimolare i consumi in vista delle festività."
+        ]
+      },
+      {
+        "category": "Italia & Europa",
+        "headline": "Milano positiva nonostante i dividendi, Lego investe in Portogallo",
+        "key_takeaway": "Piazza Affari assorbe lo stacco delle cedole e chiude in rialzo dello 0,65%.",
+        "bullets": [
+          "Indice FTSE MIB a più zero virgola sessantacinque percento nonostante il peso dello stacco dividendi per l'uno virgola quarantuno percento.",
+          "Lego annuncia un investimento di un miliardo di dollari per la costruzione di una nuova fabbrica in Portogallo.",
+          "Julius Baer segna un utile record ma delude sui nuovi flussi netti, scesi a otto virgola cinque miliardi di franchi svizzeri."
+        ]
+      }
+    ],
+    "podcast_script": "Buongiorno e benvenuti al nostro appuntamento quotidiano con i mercati finanziari. Oggi ventitré novembre duemilaventisei assistiamo a una giornata dominata dal forte ottimismo sul settore tecnologico globale, guidata dal clamoroso ritorno di Jensen Huang alla guida di Nvidia. Il consiglio di amministrazione del colosso dei microchip ha infatti reintegrato Huang come presidente e amministratore delegato soltanto undici giorni dopo la sua uscita. La notizia ha scatenato un forte rally a Wall Street, con il titolo Nvidia arrivato a guadagnare oltre il trenta percento. L'effetto si è riflesso su tutto il comparto tecnologico, rassicurando gli investitori sulla continuità strategica nello sviluppo dell'intelligenza artificiale. Sempre nel settore tecnologico si segnala un'operazione da record: CrowdStrike ha annunciato l'acquisizione di Zscaler per un valore di circa quarantatré virgola nove miliardi di dollari interamente in azioni. Sul fronte bancario, JPMorgan sta sviluppando transazioni finanziarie gestite da agenti di intelligenza artificiale capaci di operare senza intervento umano. Passando allo scenario macroeconomico, gli ultimi indicatori segnalano una solida tenuta degli Stati Uniti, con stime di crescita del prodotto interno lordo intorno al tre percento per il quarto trimestre, sostenute dalla resilienza dei consumi. Sul fronte delle materie prime, il petrolio Brent scende sotto la soglia dei novanta dollari al barile, offrendo un leggero respiro alle pressioni inflazionistiche. Il dollaro guadagna terreno, spingendo il cambio con l'euro verso quota uno virgola zero nove. In Europa la seduta si chiude con segnali positivi. Piazza Affari registra un rialzo dello zero virgola sessantacinque percento, un risultato particolarmente solido se si considera che la giornata ha visto lo stacco delle cedole per nove grandi società, con un impatto stimato nell'uno virgola quarantuno percento sull'indice principale. Tra le storie societarie del continente si evidenzia la mossa di Lego, che ha annunciato un investimento da un miliardo di dollari per un nuovo sito produttivo in Portogallo. A Zurigo, il gruppo bancario Julius Baer presenta un quadro contrastato: nonostante un utile netto record nei primi dieci mesi dell'anno, la banca ha registrato afflussi netti pari a otto virgola cinque miliardi di franchi svizzeri, un dato inferiore alle aspettative degli analisti. I mercati iniziano dunque la settimana con un ritrovato propensione al rischio, sostenuti dai grandi colossi tech. Per questo briefing è tutto, vi auguro una proficua giornata e buon lavoro."
+  }
+]
