@@ -542,19 +542,39 @@ def notify_telegram(date_label: str, report: DailyReport, audio_path: Path, acti
     base_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
     sources_preview = ", ".join(active_sources[:6]) + ("..." if len(active_sources) > 6 else "")
     link_line = f'\n\n📊 <a href="{SITE_URL}">Apri presentazione HTML e storico</a>' if SITE_URL else ""
+    
+    # 1. Invio del file audio MP3
     caption = (
-        f"📈 <b>{html.escape(report.day_headline)}</b> ({date_label})\n"
-        f"Sentiment: {html.escape(report.market_sentiment)}\n"
+        f"🎧 <b>Podcast Mercati — {date_label}</b>\n"
+        f"Sentiment: <b>{html.escape(report.market_sentiment)}</b>\n"
         f"📰 Fonti: {html.escape(sources_preview)}"
-        f"{link_line}"
     )
-
     with open(audio_path, "rb") as f:
         requests.post(
             f"{base_url}/sendAudio",
             data={"chat_id": TELEGRAM_CHAT_ID, "caption": caption, "parse_mode": "HTML", "title": f"Mercati {date_label}"},
             files={"audio": (audio_path.name, f, "audio/mpeg")},
         )
+
+    # 2. Invio del riassunto testuale strutturato + link
+    lines = [f"📈 <b>{html.escape(report.day_headline)}</b>\n"]
+    for s in report.slides:
+        lines.append(f"🔹 <b>{html.escape(s.category.upper())}</b> — {html.escape(s.headline)}")
+        lines.append(f"<i>{html.escape(s.key_takeaway)}</i>")
+        for b in s.bullets[:2]:
+            lines.append(f"• {html.escape(b)}")
+        lines.append("")
+
+    full_text = "\n".join(lines).strip() + link_line
+    requests.post(
+        f"{base_url}/sendMessage",
+        json={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": full_text[:4096],
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        },
+    )
 
 # ==========================================
 # MAIN
