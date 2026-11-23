@@ -128,7 +128,7 @@ def fetch_recent_news(hours_lookback: int = 20) -> tuple[str, list[str]]:
             feed = feedparser.parse(resp.content)
             count = 0
             for entry in feed.entries:
-                if count >= 8:
+                if count >= 5:
                     break
                 pub_str = entry.get("published") or entry.get("updated")
                 if pub_str:
@@ -147,7 +147,7 @@ def fetch_recent_news(hours_lookback: int = 20) -> tuple[str, list[str]]:
                     continue
                 seen.add(key)
 
-                summary = clean_html(entry.get("summary", entry.get("description", "")))[:260]
+                summary = clean_html(entry.get("summary", entry.get("description", "")))[:240]
                 articles.append(f"[{source}] {title}: {summary}")
                 count += 1
 
@@ -193,10 +193,12 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
         "gemini-3.8-flash",
         "gemini-3.5-flash",
         "gemini-3.5-flash-lite",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-lite",
     ]
 
     last_err = None
-    for attempt in range(3):
+    for attempt in range(4):
         for model_name in candidates:
             try:
                 print(f"   Tentativo {attempt + 1} con modello: {model_name}")
@@ -211,10 +213,14 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
                 )
                 return DailyReport.model_validate_json(response.text)
             except Exception as e:
-                print(f"   Modello {model_name} non disponibile ({e})")
+                err_str = str(e)
+                print(f"   Modello {model_name} non disponibile ({err_str[:120]}...)")
                 last_err = e
-                time.sleep(4)
-        time.sleep(10)
+                if "404" not in err_str:
+                    time.sleep(5)
+        wait_sec = 15 * (attempt + 1)
+        print(f"   Attesa di {wait_sec}s per smaltire il picco di traffico...")
+        time.sleep(wait_sec)
 
     raise RuntimeError(f"Nessun modello Gemini Flash disponibile dopo i retry: {last_err}")
 
@@ -283,7 +289,7 @@ def update_history_and_html(
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morning Market Briefing &amp; Podcast</title>
+  <title>Rassegna Mercati</title>
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
