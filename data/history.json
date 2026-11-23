@@ -3,8 +3,8 @@
     "date": "2026-11-23",
     "date_label": "23/11/2026",
     "audio_path": "audio/2026-11-23.mp3",
-    "day_headline": "Ritorno di Huang spinge i tech, ma pesano incertezze macro",
-    "market_sentiment": "Risk-On",
+    "day_headline": "Ritorno di Huang spinge i tech, prudenza sulla crescita europea",
+    "market_sentiment": "Misto",
     "active_sources": [
       "Il Sole 24 Ore - Finanza",
       "Il Sole 24 Ore - Economia",
@@ -18,79 +18,65 @@
     "slides": [
       {
         "category": "Azionario",
-        "headline": "Ritorno di Jensen Huang alla guida di Nvidia: rally sui tech",
-        "key_takeaway": "Il reintegro del CEO alla guida di Nvidia riaccende l'entusiasmo degli investitori sul settore tecnologico globale.",
+        "headline": "Clamoroso ritorno di Huang alla guida di Nvidia: il settore tech vola",
+        "key_takeaway": "Il reintegro di Jensen Huang spinge il titolo Nvidia in rialzo di oltre il trenta percento e rianima il settore tecnologico globale.",
         "bullets": [
-          "Nvidia guadagna oltre il 30% a Wall Street dopo la reintegrazione del co-fondatore.",
-          "Wall Street e borse europee in forte rialzo trascinate dall'effetto intelligenza artificiale.",
-          "Gli analisti di Wedbush ritengono che la mossa metta un punto fermo alle vendite sul settore."
+          "Nvidia registra un balzo azionario superiore al 30% dopo 11 giorni dall'allontanamento di Huang",
+          "Il rally di Nvidia trascina il Nasdaq e i titoli tecnologici europei",
+          "Gli analisti scommettono sulla stabilizzazione del settore legato ai chip e all'intelligenza artificiale"
         ],
         "sources": [
           "Il Sole 24 Ore - Finanza",
-          "Financial Times",
           "Reuters Business",
+          "Financial Times",
           "CNBC Top News",
           "MarketWatch Top Stories",
           "Investing.com Italia"
         ]
       },
       {
-        "category": "Italia & Europa",
-        "headline": "Piazza Affari giù per dividendi; Goldman frena su Pil italiano",
-        "key_takeaway": "Milano cede terreno a causa dello stacco cedole mentre Goldman Sachs riduce le stime di crescita dell'Italia.",
+        "category": "Azionario",
+        "headline": "Maximerger nella cybersicurezza: CrowdStrike acquisisce Zscaler per 44 miliardi",
+        "key_takeaway": "L'operazione interamente in azioni consolida il settore della sicurezza informatica per fronteggiare i crescenti attacchi digitali.",
         "bullets": [
-          "Milano cede lo 0,64% per lo stacco cedole di 9 big che ha impattato per l'1,41%.",
-          "Goldman Sachs prevede crescita italiana allo 0,8% nel 2026 e 0,5% nel 2027.",
-          "Studio Bce rileva che le imprese italiane affrontano ostacoli finanziari doppi rispetto ai Paesi del Nord."
+          "Valore complessivo dell'acquisizione fissato a 44 miliardi di dollari",
+          "Transazione interamente azionaria per creare un colosso integrato nella protezione dati",
+          "Mossa accelerata dal continuo aumento degli attacchi informatici a governi e imprese"
         ],
         "sources": [
-          "Il Sole 24 Ore - Finanza",
-          "ANSA Economia"
+          "Financial Times"
+        ]
+      },
+      {
+        "category": "Italia & Europa",
+        "headline": "Goldman Sachs frena sulla crescita italiana: Pil stimato allo zero virgola otto percento",
+        "key_takeaway": "L'erosione del potere d'acquisto riduce lo slancio economico dell'Italia rispetto ai principali partner europei.",
+        "bullets": [
+          "Stima del Pil italiano allo 0,8% nel 2026 e allo 0,5% nel 2027",
+          "Studio Bce evidenzia ostacoli finanziari doppi per le imprese italiane rispetto ai Paesi nordici",
+          "La Francia valuta regole fiscali in Costituzione e rischia il taglio delle stime 2027"
+        ],
+        "sources": [
+          "ANSA Economia",
+          "Reuters Business"
         ]
       },
       {
         "category": "Materie Prime & Valute",
-        "headline": "Oro in ripresa sopra il 2%, petrolio Brent in calo",
-        "key_takeaway": "L'oro approfitta della pausa del dollaro per rimbalzare, mentre il petrolio scende sotto i 90 dollari.",
+        "headline": "Petrolio sotto novanta dollari e oro in ripresa con l'euro debole",
+        "key_takeaway": "I mercati delle materie prime evidenziano dinamiche contrastanti tra il calo del greggio e il rimbalzo del metallo prezioso.",
         "bullets": [
-          "Prezzo del Brent in flessione al di sotto dei 90 dollari al barile.",
-          "Quotazioni dell'oro in rialzo di oltre il 2% grazie al rallentamento del biglietto verde.",
-          "L'euro si indebolisce nei confronti del dollaro toccando quota 1,09."
+          "Petrolio Brent in ribasso sotto i 90 dollari al barile",
+          "Oro in salita di oltre il 2% per via della pausa nel rally del dollaro americano",
+          "Euro debole a quota 1,09 dollari mentre la Corea del Sud interviene sul calo del Kospi"
         ],
         "sources": [
           "Il Sole 24 Ore - Finanza",
           "Reuters Business",
           "ANSA Economia"
         ]
-      },
-      {
-        "category": "Macro & Banche Centrali",
-        "headline": "Francia valuta regola aurea in Costituzione per frenare la spesa",
-        "key_takeaway": "Macron propone vincoli costituzionali sui conti pubblici di fronte al rischio di stime di crescita inferiori alle attese.",
-        "bullets": [
-          "Proposta di riforma costituzionale per fissare un tetto alla spesa pubblica francese.",
-          "Ministro delle Finanze avverte sul rischio di taglio della stima del Pil 2027 attualmente all'1%.",
-          "Crescono le preoccupazioni della Bce sui divari finanziari interni all'Eurozona."
-        ],
-        "sources": [
-          "Financial Times",
-          "Reuters Business"
-        ]
-      },
-      {
-        "category": "Azionario",
-        "headline": "CrowdStrike acquisisce Zscaler per 44 miliardi nel settore cyber",
-        "key_takeaway": "Mega fusione interamente azionaria nella cybersecurity per creare un gigante integrato contro le minacce informatiche.",
-        "bullets": [
-          "Operazione da 44 miliardi di dollari interamente in azioni per far fronte all'aumento degli attacchi informatici.",
-          "Forte domanda nel settore software nonostante la volatilità dei mercati azionari.",
-          "Nel settore pharma Novartis frena gli entusiasmi di chi prevede una cura rapida per il cancro tramite intelligenza artificiale."
-        ],
-        "sources": [
-          "Financial Times"
-        ]
       }
     ],
-    "podcast_script": "MARCO: Buongiorno e benvenuti al nostro briefing finanziario di oggi, lunedì ventitré novembre duemilaventisei. Oggi abbiamo analizzato per voi le notizie di Il Sole Ventiquattr'Ore Finanza, Il Sole Ventiquattr'Ore Economia, ANSA Economia, Reuters Business, Financial Times, CNBC Top News, MarketWatch Top Stories e Investing punto com Italia. Ciao Elena, giornata piena di colpi di scena sui mercati. ELENA: Ciao Marco e buongiorno a tutti. La notizia della giornata è senza dubbio il clamoroso ritorno di Jensen Huang alla guida di Nvidia come presidente e amministratore delegato. Il consiglio di amministrazione ha fatto un passo indietro e i mercati hanno risposto con un rally spettacolare. MARCO: Esatto, le azioni Nvidia sono volate di oltre il trenta percento sul listino americano e l'effetto positivo ha spinto al rialzo l'indice S and P cinquecento, il Nasdaq e i listini europei. Gli analisti di Wall Street vedono questo reintegro come un segnale di stabilizzazione per tutto il comparto dell'intelligenza artificiale. ELENA: Passando all'Europa e all'Italia, a Piazza Affari l'indice principale ha chiuso in calo dello zero virgola sessantaquattro percento, ma l'effetto è dovuto solo allo stacco cedole di nove grandi società che ha pesato per l'uno virgola quarantuno percento. Sul fronte macro, Goldman Sachs ha ridotto le stime di crescita per il nostro Paese allo zero virgola otto percento quest'anno e allo zero virgola cinque percento nel duemilasette. MARCO: Inoltre, uno studio della Banca Centrale Europea evidenzia che le imprese italiane affrontano ostacoli di credito doppi rispetto a quelle del Nord Europa, rilanciando la necessità di un'Unione dei mercati dei capitali. In Francia intanto, il presidente Macron ha proposto di inserire una regola aurea di bilancio in Costituzione per limitare la spesa pubblica. ELENA: Diamo un'occhiata a valute e materie prime, Marco. Il petrolio Brent è sceso sotto i novanta dollari al barile, mentre l'oro ha registrato un balzo di oltre il due percento grazie alla pausa del rally del dollaro. L'euro resta invece debole attorno a uno virgola zero nove sul dollaro. MARCO: Da segnalare infine una maxi operazione nel settore tecnologico, con CrowdStrike che ha annunciato l'acquisizione di Zscaler per quarantaquattro miliardi di dollari in azioni, creando un colosso senza precedenti nella sicurezza informatica. ELENA: Una mossa strategica di grande impatto. Per oggi è tutto, buon viaggio e buona giornata a tutti gli ascoltatori."
+    "podcast_script": "MARCO: Buongiorno e benvenuti al nostro appuntamento finanziario di oggi, lunedì ventitré novembre duemilaventisei. Con me c'è Anna. Oggi analizziamo le notizie da Il Sole Ventiquattr'Ore Finanza, Il Sole Ventiquattr'Ore Economia, Ansa Economia, Reuters Business, Financial Times, C N B C Top News, MarketWatch Top Stories e Investing punto com Italia. ANNA: Ciao Marco e un saluto a tutti gli ascoltatori. Partiamo subito dalla notizia che sta dominando i listini mondiali. Il consiglio di amministrazione di Nvidia ha reintegrato Jensen Huang come amministratore delegato, a soli undici giorni dal suo allontanamento. MARCO: Una mossa clamorosa, Anna. Il mercato ha reagito con un vero e proprio boato: il titolo di Nvidia è volato di oltre il trenta percento a Wall Street, trascinando al rialzo l'indice Nasdaq e l'intero comparto tecnologico globale. ANNA: Esatto, molti analisti parlano di un punto di svolta per la fiducia nel settore dell'intelligenza artificiale, anche se restano aperti i nodi sui costi dei centri dati e sugli investimenti futuri. MARCO: E sempre nel mondo della tecnologia segnaliamo una mega acquisizione. CrowdStrike acquisterà Zscaler per quarantaquattro miliardi di dollari in un'operazione interamente azionaria per creare un colosso della sicurezza informatica. ANNA: Decisamente una mossa strategica enorme. Spostandoci invece sull'economia reale europea, il quadro appare più cauto. Goldman Sachs ha tagliato le stime sulla crescita italiana, prevedendo un Prodotto Interno Lordo allo zero virgola otto percento quest'anno e allo zero virgola cinque percento nel prossimo. MARCO: A pesare è soprattutto l'erosione del potere d'acquisto dei consumatori. Inoltre uno studio della Banca Centrale Europea segnala che le imprese italiane affrontano ostacoli finanziari doppi rispetto a quelle del nord Europa. ANNA: Non va meglio in Francia, dove si ipotizzano regole di bilancio in Costituzione mentre si rivedono al ribasso le stime sulla crescita. Sul fronte materie prime, il petrolio Brent scende sotto i novanta dollari al barile, mentre l'oro guadagna oltre il due percento. MARCO: E a Milano l'indice principale soffre per lo stacco cedole di nove grandi titoli ma resiste grazie alla spinta dei tecnologici. Per oggi è tutto, grazie ad Anna e buon viaggio a chi è in ascolto. ANNA: Buona giornata e buon proseguimento a tutti."
   }
 ]
