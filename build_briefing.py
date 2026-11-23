@@ -22,9 +22,9 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 SITE_URL = os.getenv("SITE_URL", "")
 
-# Voci neurali naturali (dialogo a due voci Marco & Anna)
-VOICE_HOST_1 = "it-IT-GiuseppeNeural"  # Marco (voce maschile naturale)
-VOICE_HOST_2 = "it-IT-ElsaNeural"      # Anna (voce femminile naturale)
+# Voce neurale unica naturale
+VOICE_NAME = "it-IT-GiuseppeNeural"
+VOICE_FALLBACK = "it-IT-DiegoNeural"
 VOICE_RATE = "+0%"
 MAX_HISTORY_DAYS = 45
 
@@ -68,12 +68,12 @@ class DailyReport(BaseModel):
     slides: list[TopicSlide] = Field(description="Da 4 a 6 schede tematiche ordinate per importanza")
     podcast_script: str = Field(
         description=(
-            "Script di un podcast mattutino a due voci (MARCO e ANNA) di circa 3-4 minuti da ascoltare in auto. "
-            "Formatta OGNI battuta iniziando esattamente con 'MARCO: ' oppure 'ANNA: ' (senza asterischi né grassetti) "
-            "andando a capo tra un intervento e l'altro. "
-            "Stile: conversazione naturale, ritmata e giornalistica, con frasi brevi, pause ben punteggiate e passaggi di parola fluidi. "
-            "MARCO apre salutando e citando le fonti principali consultate oggi. "
-            "VIETATI elenchi puntati, asterischi, simboli o tag. Scrivi sigle e numeri come si pronunciano "
+            "Monologo fluido in italiano per un briefing audio mattutino di circa 3-4 minuti da ascoltare in auto, "
+            "letto da un unico conduttore. "
+            "Apri salutando l'ascoltatore e citando esplicitamente le fonti principali consultate oggi. "
+            "Usa un tono giornalistico naturale, frasi ben ritmate, punteggiatura curata per le pause e transizioni scorrevoli tra un argomento e l'altro. "
+            "NON inserire nomi di personaggi o speaker (niente 'Marco:', 'Anna:', ecc.), NON usare elenchi puntati, asterischi, simboli o tag. "
+            "Scrivi sigle e numeri esattamente come si pronunciano "
             "(es. 'S and P cinquecento', 'Banca Centrale Europea', 'più zero virgola cinque percento')."
         )
     )
@@ -139,13 +139,13 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
     sources_str = ", ".join(active_sources)
 
     prompt = f"""
-    Sei un analista finanziario senior e autore di un podcast mattutino sui mercati condotto da MARCO e ANNA.
+    Sei un analista finanziario senior e conduttore di un briefing mattutino per investitori.
     Data di oggi: {date_label}.
     Fonti consultate oggi: {sources_str}.
 
     Analizza le notizie raccolte, elimina duplicati e rumore di fondo, e crea:
     1. Una presentazione strutturata in schede tematiche (chiare, ricche di numeri e livelli chiave), indicando per ogni scheda le testate di origine nel campo 'sources'.
-    2. Uno script fluido e conversazionale a due voci (MARCO e ANNA) da ascoltare in auto, aprendo con MARCO che saluta e cita brevemente le fonti consultate oggi ({sources_str}).
+    2. Un monologo audio fluido e naturale per un singolo conduttore da ascoltare in auto, aprendo con un saluto e citando brevemente le fonti consultate oggi ({sources_str}).
 
     NOTIZIE:
     {news_text}
@@ -181,48 +181,23 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
     raise RuntimeError(f"Nessun modello Gemini Flash disponibile dopo i retry: {last_err}")
 
 # ==========================================
-# 3. GENERAZIONE AUDIO MP3 A DUE VOCI
+# 3. GENERAZIONE AUDIO MP3 (VOCE UNICA NATURALE)
 # ==========================================
-async def synthesize_segment(text: str, primary_voice: str, fallback_voice: str) -> bytes:
-    clean_text = re.sub(r"[*_#`]+", "", text).strip()
-    if not re.search(r"[a-zA-Z0-9àèéìòùÀÈÉÌÒÙ]", clean_text):
-        return b""
+async def generate_audio(script_text: str, output_path: Path):
+    clean_text = re.sub(r"[*_#`]+", "", script_text).strip()
 
-    for voice in (primary_voice, fallback_voice):
+    for voice in (VOICE_NAME, VOICE_FALLBACK):
         try:
-            buf = bytearray()
+            print(f"   Sintesi vocale con: {voice}")
             communicate = edge_tts.Communicate(clean_text, voice, rate=VOICE_RATE)
-            async for chunk in communicate.stream():
-                if chunk["type"] == "audio":
-                    buf.extend(chunk["data"])
-            if buf:
-                return bytes(buf)
+            await communicate.save(str(output_path))
+            if output_path.exists() and output_path.stat().st_size > 0:
+                return
         except Exception as e:
             print(f"   Avviso TTS con {voice} ({e}), provo fallback...")
-            await asyncio.sleep(1)
+            await asyncio.sleep(2)
 
-    raise RuntimeError(f"Impossibile sintetizzare il segmento: {clean_text[:60]}")
-
-async def generate_audio(script_text: str, output_path: Path):
-    segments = re.split(r"(?i)(?:^|\n)\s*\**\s*(MARCO|ANNA|ELENA)\s*\**\s*:\s*", script_text)
-    audio_chunks = bytearray()
-
-    if len(segments) <= 1:
-        audio_chunks.extend(
-            await synthesize_segment(script_text, VOICE_HOST_1, "it-IT-DiegoNeural")
-        )
-    else:
-        for i in range(1, len(segments), 2):
-            speaker = segments[i].strip().upper()
-            dialogue = segments[i + 1].strip()
-            if speaker in ("ANNA", "ELENA"):
-                data = await synthesize_segment(dialogue, VOICE_HOST_2, "it-IT-IsabellaNeural")
-            else:
-                data = await synthesize_segment(dialogue, VOICE_HOST_1, "it-IT-DiegoNeural")
-            audio_chunks.extend(data)
-            await asyncio.sleep(0.3)
-
-    output_path.write_bytes(bytes(audio_chunks))
+    raise RuntimeError("Impossibile generare il file audio con nessuna delle voci configurate.")
 
 # ==========================================
 # 4. AGGIORNAMENTO STORICO & GENERAZIONE HTML
@@ -430,7 +405,7 @@ def update_history_and_html(
   <div id="dayView">
     <div class="player-box">
       <div class="player-top">
-        <strong>🎧 Podcast Mattutino (Marco &amp; Anna — Modalità Auto)</strong>
+        <strong>🎧 Briefing Audio Mattutino (Modalità Auto)</strong>
         <div class="speed-btns">
           <button onclick="setSpeed(1)">1x</button>
           <button onclick="setSpeed(1.25)">1.25x</button>
@@ -564,7 +539,7 @@ def notify_telegram(date_label: str, report: DailyReport, audio_path: Path, acti
     link_line = f'\n\n📊 <a href="{SITE_URL}">Apri presentazione HTML e storico</a>' if SITE_URL else ""
 
     caption = (
-        f"🎧 <b>Podcast Mercati — {date_label}</b>\n"
+        f"🎧 <b>Briefing Mercati — {date_label}</b>\n"
         f"Sentiment: <b>{html.escape(report.market_sentiment)}</b>\n"
         f"📰 Fonti: {html.escape(sources_preview)}"
     )
@@ -576,7 +551,7 @@ def notify_telegram(date_label: str, report: DailyReport, audio_path: Path, acti
                 "caption": caption,
                 "parse_mode": "HTML",
                 "title": f"Mercati {date_label}",
-                "performer": "Marco & Anna",
+                "performer": "Rassegna Mercati",
             },
             files={"audio": (audio_path.name, f, "audio/mpeg")},
         )
@@ -621,7 +596,7 @@ def main():
     audio_filename = f"{date_iso}.mp3"
     audio_full_path = AUDIO_DIR / audio_filename
 
-    print("3. Sintesi vocale podcast a due voci...")
+    print("3. Sintesi vocale briefing...")
     asyncio.run(generate_audio(report.podcast_script, audio_full_path))
 
     print("4. Aggiornamento storico e presentazione HTML...")
