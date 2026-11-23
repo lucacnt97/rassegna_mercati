@@ -3,82 +3,138 @@
     "date": "2026-11-23",
     "date_label": "23/11/2026",
     "audio_path": "audio/2026-11-23.mp3",
-    "day_headline": "Il ritorno di Huang in Nvidia riaccende Wall Street",
+    "day_headline": "Il ritorno di Huang in Nvidia riaccende il Risk-On globale",
     "market_sentiment": "Risk-On",
     "active_sources": [
       "Il Sole 24 Ore - Finanza",
       "Il Sole 24 Ore - Economia",
       "ANSA Economia",
+      "ANSA Mondo & Geopolitica",
       "Reuters Business",
+      "Bloomberg Markets",
       "Financial Times",
+      "Morningstar",
       "CNBC Top News",
       "MarketWatch Top Stories",
+      "Oro & Commodities",
+      "Mercati Emergenti",
       "Investing.com Italia"
     ],
     "slides": [
       {
-        "category": "Azionario",
-        "headline": "Nvidia balza in borsa con il clamoroso reintegro del CEO Jensen Huang",
-        "key_takeaway": "Il ritorno del fondatore arresta il sell-off sul settore tech e trascina al rialzo Wall Street.",
+        "category": "1. Tema del Giorno",
+        "headline": "Nvidia reintegra Jensen Huang e sblocca il rally dell'Intelligenza Artificiale",
+        "key_takeaway": "Il ritorno del fondatore alla guida di Nvidia riduce l'incertezza sul comparto tech e ripristina la fiducia sul mercato azionario.",
         "bullets": [
-          "Nvidia segna un rialzo superiore al 30% a Wall Street dopo l'annuncio del board.",
-          "CrowdStrike acquisisce Zscaler con un'operazione azionaria da 44 miliardi di dollari.",
-          "Wedbush e i principali analisti confermano il rating positivo sul titolo Nvidia."
+          "Il consiglio di amministrazione di Nvidia reintegra Jensen Huang dopo soli undici giorni dalla sua uscita",
+          "Wall Street e i titoli legati all'intelligenza artificiale mettono a segno un forte rimbalzo corale",
+          "Gli analisti ritengono che la mossa ponga una solida base per stabilizzare il settore tecnologico"
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Financial Times",
+          "Reuters Business",
+          "Bloomberg Markets",
+          "CNBC Top News"
+        ]
+      },
+      {
+        "category": "2. Macro, Tassi & Geopolitica",
+        "headline": "Dollaro in rialzo sulle aspettative dei tassi ed euro in calo a 1,09",
+        "key_takeaway": "La forza del biglietto verde e le attese sui tassi americani mettono sotto pressione l'euro.",
+        "bullets": [
+          "Il cambio euro dollaro scende verso quota 1,09 a causa del costante rafforzamento della valuta statunitense",
+          "Goldman Sachs prevede che il rally del dollaro proseguira prima di stabilizzarsi nel lungo periodo",
+          "Contesto geopolitico monitorato con attenzione tra allarmi sicurezza in Europa e tensioni internazionali"
         ],
         "sources": [
           "Il Sole 24 Ore - Finanza",
           "Reuters Business",
+          "Bloomberg Markets",
+          "Investing.com Italia",
+          "ANSA Mondo & Geopolitica"
+        ]
+      },
+      {
+        "category": "3. Azionario Globale",
+        "headline": "Wall Street trascina i listini mondiali, la Corea del Sud stabilizza il KOSPI",
+        "key_takeaway": "Azionario sviluppato in netto recupero, mentre le autorita asiatiche intervengono sulla volatilita.",
+        "bullets": [
+          "Gli indici americani ed europei guidano la seduta con forte propensione al rischio",
+          "La Corea del Sud promette interventi di sostegno dopo una flessione del 5 percento dell'indice KOSPI",
+          "I gestori globali mantengono l'esposizione sull'azionario sviluppato riducendo le coperture difensive"
+        ],
+        "sources": [
+          "Reuters Business",
           "Financial Times",
-          "CNBC Top News",
+          "Morningstar",
+          "Bloomberg Markets"
+        ]
+      },
+      {
+        "category": "4. Rotazione & Focus Settori",
+        "headline": "Big Tech in grande spolvero, soffrono i beni di consumo primario",
+        "key_takeaway": "Rotazione dei capitali dai settori difensivi al comparto ad alta crescita tecnologica.",
+        "bullets": [
+          "Nvidia, Anthropic e Palo Alto Networks guidano i rialzi nel comparto tecnologico e della sicurezza",
+          "Vendite sui beni di consumo di base come Kroger e Tyson Foods in seguito all'uscita dai titoli rifugio",
+          "JPMorgan accelera nell'integrazione di agenti d'intelligenza artificiale per le operazioni finanziarie"
+        ],
+        "sources": [
           "MarketWatch Top Stories",
-          "Investing.com Italia"
+          "Bloomberg Markets",
+          "Investing.com Italia",
+          "CNBC Top News"
         ]
       },
       {
-        "category": "Italia & Europa",
-        "headline": "Stacco cedole pesa su Milano mentre Goldman Sachs frena sul PIL italiano",
-        "key_takeaway": "Piazza Affari sconta il dividendo di nove big e la stima di crescita italiana scende allo 0,8%.",
+        "category": "5. Oro & Materie Prime",
+        "headline": "L'oro risale sopra 3.600 dollari, il petrolio Brent scivola sotto i 90 dollari",
+        "key_takeaway": "L'oro ritrova supporto sulle correzioni, mentre l'energia riflette la riorganizzazione dei flussi.",
         "bullets": [
-          "L'indice milanese sconta l'impatto dell'1,41% legato allo stacco dei dividendi.",
-          "Goldman Sachs prevede per l'Italia un PIL allo 0,8% nel 2026 e allo 0,5% per l'anno successivo.",
-          "Un nuovo studio BCE rileva ostacoli finanziari doppi per le imprese italiane rispetto al Nord Europa."
-        ],
-        "sources": [
-          "Il Sole 24 Ore - Finanza",
-          "ANSA Economia"
-        ]
-      },
-      {
-        "category": "Macro & Banche Centrali",
-        "headline": "Macron propone una regola d'oro in Costituzione per frenare il deficit",
-        "key_takeaway": "La Francia tenta di blindare i conti pubblici di fronte al rischio di stime di crescita al ribasso.",
-        "bullets": [
-          "Il presidente francese propone una riforma costituzionale sul tetto alla spesa pubblica.",
-          "Il ministero dell'economia francese avverte sul rischio di revisione del PIL per il 2027.",
-          "Negli Stati Uniti l'attività economica mostra una crescita stimata al 3% nel quarto trimestre."
+          "Il metallo prezioso recupera terreno portandosi oltre i 3.600 dollari dopo i recenti cali",
+          "Goldman Sachs mantiene una visione rialzista di lungo termine sull'oro con target a 4.650 dollari",
+          "Il greggio Brent si riposiziona sotto i 90 dollari al barile per l'aumento della liquidita di mercato"
         ],
         "sources": [
           "Reuters Business",
-          "Financial Times",
-          "MarketWatch Top Stories"
+          "Bloomberg Markets",
+          "Oro & Commodities",
+          "Il Sole 24 Ore - Finanza"
         ]
       },
       {
-        "category": "Materie Prime & Valute",
-        "headline": "Petrolio Brent sotto 90 dollari e l'Euro ritraccia verso quota 1,09",
-        "key_takeaway": "Calano le quotazioni energetiche mentre il dollaro si rafforza e l'oro tenta un recupero.",
+        "category": "6. Mercati Emergenti",
+        "headline": "Dollaro forte sui flussi emergenti, l'India sale al 14,7% negli indici",
+        "key_takeaway": "Il dollaro solido frena i capitali verso i mercati emergenti, ma l'India guadagna peso strategico.",
         "bullets": [
-          "Il barile di Brent scende al di sotto della soglia psicologica dei 90 dollari.",
-          "L'euro perde terreno nei confronti del biglietto verde posizionandosi a 1,09 dollari.",
-          "Il prezzo dell'oro riprende quota grazie agli acquisti su livelli di prezzo ritenuti convenienti."
+          "La quota dell'India nell'indice MSCI Emerging Markets raggiunge il 14,7 percento grazie ai flussi esteri",
+          "Il Brasile taglia le stime di crescita per il 2027 al 1,8 percento e avvia ristrutturazioni societarie",
+          "La Cina acquista oro per compensare un avanzo commerciale record da mille miliardi di dollari"
+        ],
+        "sources": [
+          "Mercati Emergenti",
+          "Investing.com Italia",
+          "Bloomberg Markets",
+          "Oro & Commodities"
+        ]
+      },
+      {
+        "category": "7. Focus Italia",
+        "headline": "Piazza Affari sale dello 0,65% riassorbendo lo stacco dei dividendi",
+        "key_takeaway": "Il FTSE MIB dimostra tenuta nonostante le sfide della crescita economica complessiva.",
+        "bullets": [
+          "Il listino milanese chiude in positivo assorbendo lo stacco cedole di nove big pari a 1,41 percento di peso",
+          "Goldman Sachs stima il PIL italiano allo 0,8 percento quest'anno e allo 0,5 percento nel prossimo",
+          "Uno studio della BCE rileva ostacoli al credito doppi per le imprese italiane rispetto al nord Europa"
         ],
         "sources": [
           "Il Sole 24 Ore - Finanza",
           "ANSA Economia",
-          "Reuters Business"
+          "Morningstar"
         ]
       }
     ],
-    "podcast_script": "Buongiorno e benvenuti al nostro appuntamento finanziario del ventitré novembre duemilaventisei. Oggi il nostro briefing si basa sull'analisi delle notizie provenienti da Il Sole ventiquattr'ore Finanza, Il Sole ventiquattr'ore Economia, ANSA Economia, Reuters Business, Financial Times, CNBC Top News, MarketWatch Top Stories e Investing.com Italia. La notizia regina della giornata è senza dubbio il clamoroso ritorno di Jensen Huang alla guida di Nvidia. Il consiglio di amministrazione del colosso dei microchip ha reintegrato il suo fondatore a soli undici giorni dal licenziamento. La reazione dei mercati è stata immediata, con il titolo di Nvidia che è balzato di oltre il trenta percento a Wall Street, trascinando al rialzo l'intero comparto tecnologico e l'indice Nasdaq. Sempre nel settore tech spicca la maxi acquisizione di Zscaler da parte di CrowdStrike per un valore di quarantaquattro miliardi di dollari. Spostandoci in Italia e in Europa, la giornata su Piazza Affari è stata caratterizzata dallo stacco delle cedole di nove grandi società, un'operazione che ha pesato sull'indice principale per un uno virgola quarantuno percento, portando il dato finale a meno zero virgola sessantaquattro percento. A livello macroeconomico arrivano segnali di cautela da Goldman Sachs, che ha ridotto le stime di crescita per il Pil italiano allo zero virgola otto percento per quest'anno e allo zero virgola cinque percento per il prossimo, a causa dell'erosione del potere d'acquisto. Uno studio della Banca Centrale Europea evidenzia inoltre che le imprese italiane affrontano ostacoli finanziari doppi rispetto ai concorrenti del nord Europa. In Francia, il presidente Macron propone una riforma costituzionale per introdurre una regola d'oro sul bilancio con l'obiettivo di contenere la spesa pubblica. Sul fronte delle materie prime e dei cambi, registriamo una flessione del petrolio Brent, che scende sotto la soglia dei novanta dollari al barile, mentre il cambio euro dollaro vede la moneta unica scendere a quota uno virgola zero nove di fronte a un dollaro in forte rafforzamento. L'oro mostra invece segnali di recupero grazie agli acquisti sui minimi. Vi ringrazio per l'ascolto, vi auguro una buona giornata e un buon viaggio."
+    "podcast_script": "Buongiorno e benvenuti al nostro briefing finanziario del mattino del ventitre novembre duemilaventisei. Oggi esaminiamo i quadri di mercato analizzando le notizie raccolte dalle principali testate finanziarie, tra cui Il Sole Ventiquattrore Finanza ed Economia, ANSA Economia e Mondo, Reuters Business, Bloomberg Markets, Financial Times, Morningstar, CNBC, MarketWatch, Oro e Commodities, Mercati Emergenti e Investing dot com Italia. La notizia principale che domina i mercati e riaccende la propensione al rischio a livello globale riguarda il reintegro di Jensen Huang alla guida di Nvidia. A soli undici giorni dalla sua uscita, il consiglio di amministrazione ha richiamato il fondatore alla carica di presidente e amministratore delegato. Questa decisione ha azzerato l'incertezza sul colosso dei chip e ha innescato un forte rimbalzo di Wall Street e di tutto il comparto legato all'intelligenza artificiale. Passando al quadro macroeconomico, la forza dell'economia e della tecnologia americana mantiene elevati i rendimenti negli Stati Uniti. Il dollaro continua la sua spinta, mentre l'euro cede terreno scendendo verso quota uno virgola zero nove. Gli analisti di Goldman Sachs sottolineano come il biglietto verde possa mantenere questa forza prima di un modesto ritracciamento nei prossimi mesi. Nel frattempo il contesto geopolitico rimane sotto attenta osservazione per una serie di allarmi di sicurezza in Europa e tensioni in Medio Oriente. Per quanto riguarda l'azionario globale, assistiamo a una seduta positiva nei listini sviluppati di America ed Europa, mentre in Asia le autorita della Corea del Sud sono intervenute con misure di sostegno per stabilizzare il listino KOSPI dopo un calo del cinque per cento. Sul fronte della rotazione settoriale, i capitali si stanno spostando con decisione verso i titoli tecnologici ad alta crescita come Nvidia, Anthropic e Palo Alto Networks. Al contrario, soffrono i settori piu difensivi come i consumi di base, con cali su titoli come Kroger e Tyson Foods. Nel comparto finanziario da segnalare l'accelerazione di JPMorgan sull'integrazione di agenti di intelligenza artificiale per l'automazione delle transazioni. Dando uno sguardo alle materie prime e ai beni rifugio, l'oro ha ritrovato brillantezza risalendo sopra i tremila seicento dollari all'oncia grazie agli acquisti sulla debolezza. Le case d'affari confermano stime rialziste di lungo termine fino a quattromila seicento cinquanta dollari entro il duemilaventisette. Il petrolio Brent invece scivola leggermente sotto i novanta dollari al barile. Nei mercati emergenti la forza del dollaro condiziona i flussi di capitale, ma si nota il consolidamento dell'India, il cui peso nell'indice MSCI Emerging Markets sale al quattordici virgola sette per cento. In America Latina il Brasile rivede al ribasso la crescita attesa per il duemilaventisette all'uno virgola otto per cento. Chiudiamo con il focus sull'Italia. Piazza Affari mostra una buona resilienza chiudendo in rialzo dello zero virgola sessantacinque per cento e riassorbendo perfettamente lo stacco di dividendi di nove grandi societa che pesava per l'uno virgola quarantuno per cento sull'indice principale. Sul fronte economico Goldman Sachs stima la crescita del prodotto interno lordo italiano allo zero virgola otto per cento per quest'anno e allo zero virgola cinque per cento per il prossimo, mentre la Banca Centrale Europea rileva come le imprese italiane debbano affrontare ostacoli finanziari piu elevati rispetto a quelle del Nord Europa. Per oggi e tutto, vi auguro una buona giornata e un buon lavoro."
   }
 ]
