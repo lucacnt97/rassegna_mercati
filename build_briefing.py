@@ -284,6 +284,12 @@ def update_history_and_html(
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morning Market Briefing &amp; Podcast</title>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%230d1117'/%3E%3Cpath d='M96 352l112-112 80 80 128-144' fill='none' stroke='%2358a6ff' stroke-width='44' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M336 176h80v80' fill='none' stroke='%233fb950' stroke-width='44' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%230d1117'/%3E%3Cpath d='M96 352l112-112 80 80 128-144' fill='none' stroke='%2358a6ff' stroke-width='44' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M336 176h80v80' fill='none' stroke='%233fb950' stroke-width='44' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <style>
     :root {{
       --bg: #0d1117;
