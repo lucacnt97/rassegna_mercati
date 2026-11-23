@@ -23,8 +23,8 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 SITE_URL = os.getenv("SITE_URL", "")
 
 # Voci neurali naturali (dialogo a due voci Marco & Anna)
-VOICE_HOST_1 = "it-IT-GiuseppeMultilingualNeural"  # Marco
-VOICE_HOST_2 = "it-IT-ElsaNeural"                  # Anna
+VOICE_HOST_1 = "it-IT-GiuseppeNeural"  # Marco (voce maschile naturale)
+VOICE_HOST_2 = "it-IT-ElsaNeural"      # Anna (voce femminile naturale)
 VOICE_RATE = "+0%"
 MAX_HISTORY_DAYS = 45
 
@@ -183,26 +183,44 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
 # ==========================================
 # 3. GENERAZIONE AUDIO MP3 A DUE VOCI
 # ==========================================
+async def synthesize_segment(text: str, primary_voice: str, fallback_voice: str) -> bytes:
+    clean_text = re.sub(r"[*_#`]+", "", text).strip()
+    if not re.search(r"[a-zA-Z0-9àèéìòùÀÈÉÌÒÙ]", clean_text):
+        return b""
+
+    for voice in (primary_voice, fallback_voice):
+        try:
+            buf = bytearray()
+            communicate = edge_tts.Communicate(clean_text, voice, rate=VOICE_RATE)
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    buf.extend(chunk["data"])
+            if buf:
+                return bytes(buf)
+        except Exception as e:
+            print(f"   Avviso TTS con {voice} ({e}), provo fallback...")
+            await asyncio.sleep(1)
+
+    raise RuntimeError(f"Impossibile sintetizzare il segmento: {clean_text[:60]}")
+
 async def generate_audio(script_text: str, output_path: Path):
     segments = re.split(r"(?i)(?:^|\n)\s*\**\s*(MARCO|ANNA|ELENA)\s*\**\s*:\s*", script_text)
     audio_chunks = bytearray()
 
     if len(segments) <= 1:
-        communicate = edge_tts.Communicate(script_text.replace("*", ""), VOICE_HOST_1, rate=VOICE_RATE)
-        await communicate.save(str(output_path))
-        return
-
-    for i in range(1, len(segments), 2):
-        speaker = segments[i].strip().upper()
-        dialogue = segments[i + 1].replace("*", "").strip()
-        if not dialogue:
-            continue
-
-        voice = VOICE_HOST_2 if speaker in ("ANNA", "ELENA") else VOICE_HOST_1
-        communicate = edge_tts.Communicate(dialogue, voice, rate=VOICE_RATE)
-        async for chunk in communicate.stream():
-            if chunk["type"] == "audio":
-                audio_chunks.extend(chunk["data"])
+        audio_chunks.extend(
+            await synthesize_segment(script_text, VOICE_HOST_1, "it-IT-DiegoNeural")
+        )
+    else:
+        for i in range(1, len(segments), 2):
+            speaker = segments[i].strip().upper()
+            dialogue = segments[i + 1].strip()
+            if speaker in ("ANNA", "ELENA"):
+                data = await synthesize_segment(dialogue, VOICE_HOST_2, "it-IT-IsabellaNeural")
+            else:
+                data = await synthesize_segment(dialogue, VOICE_HOST_1, "it-IT-DiegoNeural")
+            audio_chunks.extend(data)
+            await asyncio.sleep(0.3)
 
     output_path.write_bytes(bytes(audio_chunks))
 
