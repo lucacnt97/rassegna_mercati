@@ -21,8 +21,9 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 SITE_URL = os.getenv("SITE_URL", "")
 
-VOICE_NAME = "it-IT-DiegoNeural"
-VOICE_RATE = "+10%"
+VOICE_HOST_1 = "it-IT-GiuseppeMultilingualNeural"  # Conduttore principale (molto naturale)
+VOICE_HOST_2 = "it-IT-ElsaNeural"                  # Co-conduttrice per analisi e approfondimenti
+VOICE_RATE = "+0%"                                 # Velocità naturale (zero distorsioni metalliche)
 MAX_HISTORY_DAYS = 45
 
 DATA_DIR = Path("data")
@@ -60,14 +61,15 @@ class DailyReport(BaseModel):
     market_sentiment: str = Field(description="Una parola: Risk-On, Risk-Off, Cauto, o Misto")
     slides: list[TopicSlide] = Field(description="Da 4 a 6 schede tematiche ordinate per importanza")
     podcast_script: str = Field(
-        description=(
-            "Script discorsivo in italiano per un podcast mattutino di 3-4 minuti da ascoltare in auto. "
-            "Inizia salutando e citando esplicitamente le principali testate consultate oggi (es. Il Sole 24 Ore, Milano Finanza, ANSA Economia, Reuters, Financial Times, CNBC). "
-            "VIETATI elenchi puntati, asterischi, simboli o tag. Scrivi sigle e numeri come si pronunciano "
-            "(es. 'S and P cinquecento', 'Banca Centrale Europea', 'più zero virgola cinque percento'). "
-            "Usa transizioni naturali tra un tema e l'altro."
+            description=(
+                "Script di un podcast mattutino a due voci (MARCO ed ELENA) di circa 3-4 minuti da ascoltare in auto. "
+                "Formatta OGNI battuta iniziando esattamente con 'MARCO: ' oppure 'ELENA: ' andando a capo tra un intervento e l'altro. "
+                "Stile: conversazione naturale, ritmata e giornalistica, con frasi brevi, pause ben punteggiate (virgole e punti) e passaggi di parola fluidi. "
+                "MARCO apre salutando e citando le fonti principali consultate oggi. "
+                "VIETATI elenchi puntati, asterischi, simboli o tag. Scrivi sigle e numeri come si pronunciano "
+                "(es. 'S and P cinquecento', 'Banca Centrale Europea', 'più zero virgola cinque percento')."
+            )
         )
-    )
 
 # ==========================================
 # 1. RACCOLTA NOTIZIE RSS
@@ -178,8 +180,29 @@ def generate_report(news_text: str, date_label: str, active_sources: list[str]) 
 # 3. GENERAZIONE AUDIO MP3
 # ==========================================
 async def generate_audio(script_text: str, output_path: Path):
-    communicate = edge_tts.Communicate(script_text, VOICE_NAME, rate=VOICE_RATE)
-    await communicate.save(str(output_path))
+    lines = [line.strip() for line in script_text.splitlines() if line.strip()]
+    audio_chunks = bytearray()
+
+    for line in lines:
+        if line.upper().startswith("ELENA:"):
+            voice = VOICE_HOST_2
+            clean_line = line[6:].strip()
+        elif line.upper().startswith("MARCO:"):
+            voice = VOICE_HOST_1
+            clean_line = line[6:].strip()
+        else:
+            voice = VOICE_HOST_1
+            clean_line = line
+
+        if not clean_line:
+            continue
+
+        communicate = edge_tts.Communicate(clean_line, voice, rate=VOICE_RATE)
+        async for chunk in communicate.stream():
+            if chunk["type"] == "audio":
+                audio_chunks.extend(chunk["data"])
+
+    output_path.write_bytes(bytes(audio_chunks))
 
 # ==========================================
 # 4. AGGIORNAMENTO STORICO & GENERAZIONE HTML
