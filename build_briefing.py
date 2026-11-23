@@ -120,16 +120,39 @@ def generate_report(news_text: str, date_label: str) -> DailyReport:
     NOTIZIE:
     {news_text}
     """
-    response = client.models.generate_content(
-        model="gemini-flash-latest",
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            response_schema=DailyReport,
-            temperature=0.3,
-        ),
-    )
-    return DailyReport.model_validate_json(response.text)
+
+    # Recupera dinamicamente i modelli Flash disponibili sulla chiave API
+    available_flash = [
+        m.name.replace("models/", "")
+        for m in client.models.list()
+        if "flash" in m.name.lower()
+        and "image" not in m.name.lower()
+        and "audio" not in m.name.lower()
+        and "tts" not in m.name.lower()
+    ]
+    # Ordina dando priorità ai modelli più recenti
+    available_flash.sort(reverse=True)
+    candidates = available_flash or ["gemini-2.5-flash", "gemini-2.0-flash"]
+
+    last_err = None
+    for model_name in candidates:
+        try:
+            print(f"   Tentativo con modello: {model_name}")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=DailyReport,
+                    temperature=0.3,
+                ),
+            )
+            return DailyReport.model_validate_json(response.text)
+        except Exception as e:
+            print(f"   Modello {model_name} non disponibile ({e}), passo al successivo...")
+            last_err = e
+
+    raise RuntimeError(f"Nessun modello Gemini Flash disponibile: {last_err}")
 
 # ==========================================
 # 3. GENERAZIONE AUDIO MP3
