@@ -1,1 +1,5 @@
-
+feedparser
+google-genai
+edge-tts
+pydantic
+requests
