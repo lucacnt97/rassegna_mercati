@@ -1,5 +1,135 @@
 [
   {
+    "date": "2026-11-24",
+    "date_label": "24/11/2026",
+    "audio_path": "audio/2026-11-24.mp3",
+    "day_headline": "Tech in retromarcia e timori sui dazi frenano i mercati",
+    "market_sentiment": "Risk-Off",
+    "active_sources": [
+      "Il Sole 24 Ore - Finanza",
+      "Il Sole 24 Ore - Economia",
+      "ANSA Economia",
+      "ANSA Mondo & Geopolitica",
+      "Reuters Business",
+      "Bloomberg Markets",
+      "Financial Times",
+      "Morningstar",
+      "CNBC Top News",
+      "MarketWatch Top Stories",
+      "Oro & Commodities",
+      "Mercati Emergenti",
+      "Investing.com Italia"
+    ],
+    "slides": [
+      {
+        "category": "1. Tema del Giorno",
+        "headline": "Frenata del tech e timori su nuovi dazi appesantiscono i listini",
+        "key_takeaway": "La volatilita sul comparto intelligenza artificiale e le incertezze commerciali suggeriscono prudenza sui titoli growth ad alto multiplo.",
+        "bullets": [
+          "Nvidia cede il 4,3% dopo i recenti rialzi e Anthropic scivola a 80,61 dollari, sotto il prezzo di IPO di 83 dollari.",
+          "Wall Street apre in deciso ribasso con il Nasdaq in calo dell'1,78% e lo S&P 500 a -1,25%.",
+          "Tornano in primo piano le preoccupazioni per un inasprimento delle barriere commerciali statunitensi."
+        ],
+        "sources": [
+          "Financial Times",
+          "Bloomberg Markets",
+          "ANSA Economia"
+        ]
+      },
+      {
+        "category": "2. Macro, Tassi & Geopolitica",
+        "headline": "Fed orientata a tassi elevati nel tempo e tensioni sul commercio",
+        "key_takeaway": "La prospettiva di tassi reali piu alti a lungo e il rafforzamento del dollaro richiedono cautela sull'obbligazionario.",
+        "bullets": [
+          "John Williams della Fed dichiara probabili tassi piu alti nel tempo per riportare l'inflazione al 2% entro il 2027.",
+          "L'incertezza sulla politica doganale americana spinge gli operatori verso asset piu difensivi.",
+          "L'euro evidenzia debolezza nei confronti del biglietto verde a causa dei differenziali di rendimento."
+        ],
+        "sources": [
+          "CNBC Top News",
+          "Il Sole 24 Ore - Finanza",
+          "Reuters Business"
+        ]
+      },
+      {
+        "category": "3. Azionario Globale",
+        "headline": "Wall Street ed Europa in ripiegamento trainate al ribasso dai chip",
+        "key_takeaway": "Mantenere l'esposizione azionaria globale ben diversificata evitando l'eccesso di concentrazione sulle megacap USA.",
+        "bullets": [
+          "Wall Street scivola in avvio: Dow Jones -0,55%, Nasdaq -1,78% e S&P 500 -1,25%.",
+          "I bilanci dei fondi di previdenza 401(k) negli Stati Uniti registrano una contrazione a causa delle oscillazioni di mercato.",
+          "Le piazze finanziarie europee arretrano di riflesso alle tensioni sulla tecnologia e sul commercio internazionale."
+        ],
+        "sources": [
+          "ANSA Economia",
+          "MarketWatch Top Stories",
+          "Bloomberg Markets"
+        ]
+      },
+      {
+        "category": "4. Rotazione & Focus Settori",
+        "headline": "Sanofi svetta con maxi M&A nel pharma mentre il tech va KO",
+        "key_takeaway": "La rotazione settoriale premia l'healthcare difensivo a scapito della tecnologia e dei semiconduttori.",
+        "bullets": [
+          "Sanofi acquisisce la statunitense Insmed per 37,6 miliardi di dollari proseguendo il consolidamento farmaceutico.",
+          "Forte correzione per i titoli legati ad intelligenza artificiale e cloud come CoreWeave ed Anthropic.",
+          "In ambito energetico l'attenzione resta concentrata sull'imminente decisione dell'OPEC+ sull'offerta di greggio."
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Investing.com Italia",
+          "Bloomberg Markets"
+        ]
+      },
+      {
+        "category": "5. Oro & Materie Prime",
+        "headline": "L'oro tiene la quota grazie alle banche centrali e al digitale",
+        "key_takeaway": "L'oro si conferma una componente fondamentale per stabilizzare il portafoglio di fronte ai rischi geopolitici.",
+        "bullets": [
+          "Il prezzo dell'oro tiene il supporto favorito dall'accumulo continuato da parte delle banche centrali mondiali.",
+          "JPMorgan e HSBC realizzano le prime transazioni sulla nuova piattaforma di oro digitale a Londra.",
+          "I prezzi del greggio oscillano mentre Petrobras incrementa gli investimenti nel suo piano quinquennale."
+        ],
+        "sources": [
+          "Oro & Commodities",
+          "Bloomberg Markets",
+          "Reuters Business"
+        ]
+      },
+      {
+        "category": "6. Mercati Emergenti",
+        "headline": "Rendimenti USA in salita ed energia mettono sotto pressione gli emergenti",
+        "key_takeaway": "Privilegiare i mercati emergenti con fondamentali fiscali solidi e basso debito denominato in valuta estera.",
+        "bullets": [
+          "Il rialzo dei rendimenti dei Treasury americani aumenta il costo del rifinanziamento per i paesi emergenti.",
+          "In Africa proseguono le complessita sul debito sovrano con ritardi nella ristrutturazione in Senegal.",
+          "La crescita dei consumi energetici e il rallentamento tech rappresentano sfide per diverse economie asiatiche."
+        ],
+        "sources": [
+          "Mercati Emergenti",
+          "Bloomberg Markets",
+          "Reuters Business"
+        ]
+      },
+      {
+        "category": "7. Focus Italia",
+        "headline": "Piazza Affari debole sul tech e i sindacati chiedono tutele all'UE",
+        "key_takeaway": "La selettivita sul listino italiano premia le societa difensive rispetto ai settori esposti alle tensioni industriali europee.",
+        "bullets": [
+          "Milano chiude in calo appesantita dalle vendite sul comparto tecnologico e dai timori di guerra commerciale.",
+          "I sindacati italiani ed europei si mobilitano a Strasburgo denunciando i rischi per l'occupazione manifatturiera.",
+          "Il settore privato richiede accelerazione negli investimenti per l'adozione concreta dell'AI nelle imprese."
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Il Sole 24 Ore - Economia",
+          "Investing.com Italia"
+        ]
+      }
+    ],
+    "podcast_script": "Buongiorno e benvenuti al briefing finanziario di oggi, ventiquattro novembre duemilaventisei. Oggi abbiamo analizzato le notizie e le analisi pubblicate da Il Sole ventiquattro Ore Finanza, Il Sole ventiquattro Ore Economia, ANSA Economia, ANSA Mondo e Geopolitica, Reuters Business, Bloomberg Markets, Financial Times, Morningstar, CNBC Top News, MarketWatch Top Stories, Oro e Commodities, Mercati Emergenti e Investing dot com Italia. Il tema principale che orienta i mercati in questa giornata e la decisa frenata del settore tecnologico globale, unitamente al riemergere dei timori legati a possibili nuovi dazi commerciali statunitensi. L'effetto positivo legato al rientro di Jensen Huang si e rapidamente esaurito: il titolo Nvidia ha ceduto il quattro virgola tre per cento, mentre Anthropic e scivolata al di sotto del prezzo dell'offerta pubblica iniziale, scendendo a ottanta dollari e sessantuno centesimi. Nel quadro macroeconomico, la prudenza resta massima. John Williams della Federal Reserve ha dichiarato che tassi d'interesse piu elevati saranno necessari ancora per un periodo prolungato per riportare l'inflazione verso il target del due per cento, il cui raggiungimento e previsto soltanto verso il duemilaventisette. Questa prospettiva sostiene i rendimenti delle obbligazioni americane e mantiene il cambio euro dollaro sotto pressione. Sul fronte dell'azionario globale, assistiamo a vendite diffuse sui listini statunitensi, con l'indice Nasdaq che perde l'uno virgola settantotto per cento e lo S and P cinquecento in flessione dell'uno virgola venticinque per cento. Contestualmente si nota una netta rotazione settoriale verso comparti piu difensivi: spicca infatti il settore farmaceutico grazie alla maxi acquisizione da trentasette virgola sei miliardi di dollari annunciata dal gruppo francese Sanofi sulla statunitense Insmed. Analizzando l'oro e i mercati emergenti, il metallo prezioso mostra una buona capacita di tenuta pur in presenza di tassi reali elevati, grazie agli acquisti strategici delle banche centrali e al debutto delle scambi sul nuovo oro digitale londinese da parte di JPMorgan e HSBC. Per quanto riguarda gli emergenti, la crescita dei rendimenti statunitensi impone massima selettivita a causa dell'impatto sui debiti in valuta estera. Infine, volgendo lo sguardo all'Italia, Piazza Affari archivia una seduta debole sulla scia dei realizzi sul comparto tecnologico. A livello industriale, i sindacati italiani ed europei hanno portato a Strasburgo un forte appello per una politica industriale comunitaria capace di tutelare l'occupazione e sostenere gli investimenti nell'innovazione tecnologica. Il briefing di oggi si conclude qui, vi auguro una buona giornata e un buon lavoro."
+  },
+  {
     "date": "2026-11-23",
     "date_label": "23/11/2026",
     "audio_path": "audio/2026-11-23.mp3",
