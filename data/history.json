@@ -1,5 +1,138 @@
 [
   {
+    "date": "2026-11-25",
+    "date_label": "25/11/2026",
+    "audio_path": "audio/2026-11-25.mp3",
+    "day_headline": "Sell-off sul Tech e nuovi dazi USA scuotono i mercati",
+    "market_sentiment": "Risk-Off",
+    "active_sources": [
+      "ANSA Economia",
+      "ANSA Mondo & Geopolitica",
+      "Reuters Business",
+      "Bloomberg Markets",
+      "Financial Times",
+      "Morningstar",
+      "CNBC Top News",
+      "MarketWatch Top Stories",
+      "Oro & Commodities",
+      "Investing.com Italia"
+    ],
+    "slides": [
+      {
+        "category": "1. Tema del Giorno",
+        "headline": "Crollo del settore Tech e scatto sui Treasury causa nuovi dazi",
+        "key_takeaway": "L'aumento dell'avversione al rischio penalizza la componente growth azionaria favorendo i governativi americani.",
+        "bullets": [
+          "Il Nasdaq cento cede oltre il tre per cento sulla scia dei dubbi sulle valutazioni legate all'intelligenza artificiale.",
+          "Nuova proposta USA di dazi su Cina, Unione Europea fino al quindici per cento e altri dodici paesi.",
+          "Fuga verso la sicurezza sui Treasury americani nonostante un PIL del terzo trimestre robusto al quattro virgola tre per cento."
+        ],
+        "sources": [
+          "Bloomberg Markets",
+          "Financial Times",
+          "Reuters Business",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "2. Macro, Tassi & Geopolitica",
+        "headline": "PIL USA forte ma inflazione al tre virgola otto e dazi in vista",
+        "key_takeaway": "Tassi elevati e dazi protezionistici mantengono alta la pressione sui rendimenti e sul cambio euro dollaro.",
+        "bullets": [
+          "PIL USA cresce del quattro virgola tre per cento nel terzo trimestre, oltre il tre virgola cinque atteso, con inflazione al tre virgola otto per cento.",
+          "Proposta della Casa Bianca per dazi fino al quindici per cento alle merci provenienti dall'Unione Europea.",
+          "Tensioni geopolitiche in aumento con attacchi Houthi a Riyadh e no-fly zone annunciata dalla Polonia al confine ucraino."
+        ],
+        "sources": [
+          "ANSA Economia",
+          "ANSA Mondo & Geopolitica",
+          "Reuters Business",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "3. Azionario Globale",
+        "headline": "Borse mondiali in ritirata per il calo dei chip e incertezza dazi",
+        "key_takeaway": "Mantenere la diversificazione geografica e difensiva per mitigare i ribassi del comparto tecnologico statunitense.",
+        "bullets": [
+          "Negativita diffusa sui listini USA con forte calo per i colossi dei semiconduttori come Nvidia e Dell.",
+          "Europa in rosso con Milano in calo dello zero virgola nove per cento; Parigi tiene a piu zero virgola quarantacinque per cento.",
+          "Sondaggi indicano stima di crescita per l'azionario europeo nel ventisette ma con elevata volatilita nel breve."
+        ],
+        "sources": [
+          "Reuters Business",
+          "Bloomberg Markets",
+          "Financial Times",
+          "ANSA Economia"
+        ]
+      },
+      {
+        "category": "4. Rotazione & Focus Settori",
+        "headline": "Forte contrazione per Tech e Banche, tengono Lusso e Auto",
+        "key_takeaway": "Rotazione in corso da titoli tecnologici ad alta valutazione verso comparti difensivi e ciclici tradizionali.",
+        "bullets": [
+          "Forte flessione del settore tecnologico e dei chip nonostante backlog ordini elevati dichiarati da Dell.",
+          "Settore bancario europeo appesantito dalle incertezze regolatorie e macroeconomiche.",
+          "Lusso e Automotive mostrano resilienza sul listino parigino bilanciando le vendite sui tecnologici."
+        ],
+        "sources": [
+          "ANSA Economia",
+          "Bloomberg Markets",
+          "MarketWatch Top Stories",
+          "Financial Times"
+        ]
+      },
+      {
+        "category": "5. Oro & Materie Prime",
+        "headline": "Oro in assestamento sotto la pressione del dollaro, petrolio in rialzo",
+        "key_takeaway": "L'oro resta fondamentale come copertura a lungo termine mentre le tensioni energetiche sostengono il greggio.",
+        "bullets": [
+          "Oro in leggero calo a causa del rafforzamento del dollaro e delle aspettative sui tassi legate ai dazi.",
+          "Le banche centrali continuano ad acquistare metallo giallo sui ribassi in ottica di protezione patrimoniale.",
+          "Petrolio WTI in rialzo a ottantadue virgola trentatre dollari al barile dopo attacchi a raffinerie russe e in Medio Oriente."
+        ],
+        "sources": [
+          "Oro & Commodities",
+          "ANSA Economia",
+          "ANSA Mondo & Geopolitica",
+          "CNBC Top News"
+        ]
+      },
+      {
+        "category": "6. Mercati Emergenti",
+        "headline": "Incertezza dazi pesano sull'Asia, storica IPO imminente in Nigeria",
+        "key_takeaway": "Cautela sugli emergenti esposti all'export verso gli USA, monitorando opportunita su energia e materie prime.",
+        "bullets": [
+          "I nuovi dazi statunitensi minacciano la crescita economica in Cina e nell'area asiatica.",
+          "Tensioni commerciali tra Unione Europea e Brasile su blocco importazioni di pollo e miele.",
+          "Dangote Refinery pronta alla quotazione a Lagos il primo dicembre per quella che sara la maggiore IPO africana."
+        ],
+        "sources": [
+          "Reuters Business",
+          "Bloomberg Markets",
+          "ANSA Mondo & Geopolitica",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "7. Focus Italia",
+        "headline": "Piazza Affari cede lo zero virgola nove per cento frenata da banche e chip",
+        "key_takeaway": "Il mercato italiano soffre il sentiment negativo sul comparto bancario e tecnologico continentale.",
+        "bullets": [
+          "FTSE MIB chiude in calo dello zero virgola nove per cento in scia alle perdite dei chip ed istituti finanziari.",
+          "Siglato accordo a San Paolo tra Assolombarda e Italcam per rafforzare la presenza delle imprese italiane in Brasile.",
+          "Rendimento dei BTP e spread monitorati strettamente nel quadro della volatilita dei governativi europei."
+        ],
+        "sources": [
+          "ANSA Economia",
+          "Investing.com Italia",
+          "Reuters Business"
+        ]
+      }
+    ],
+    "podcast_script": "Buongiorno e benvenuti al briefing finanziario di oggi venticinque novembre duemilaventisei. Per l'analisi di questa mattina abbiamo esaminato le principali testate internazionali e nazionali, tra cui ANSA Economia, ANSA Mondo e Geopolitica, Reuters Business, Bloomberg Markets, Financial Times, Morningstar, CNBC Top News, MarketWatch Top Stories, Oro e Commodities e Investing punto com Italia. La macro evidenza che domina la seduta di oggi e una forte recrudescenza dell'avversione al rischio sui mercati globali. Ad innescare le vendite e la doppia combinazione tra il continuo sell-off sul settore tecnologico legato all'intelligenza artificiale e le nuove minacce tariffarie arrivate dagli Stati Uniti. Il mercato sta vivendo un momento di profonda riponderazione dei rischi, evidenziato da una vera e propria corsa agli acquisti sui titoli di Stato americani. Sul fronte macroeconomico e geopolitico, gli ultimi dati americani mostrano un Prodotto Interno Lordo del terzo trimestre in crescita al quattro virgola tre per cento, superiore alle stime di quattro virgola cinque per cento, ma accompagnato da un'inflazione ancora sostenuta al tre virgola otto per cento. Questa combinazione di crescita forte e prezzi elevati, unita alla proposta della Casa Bianca di introdurre nuovi dazi fino al quindici per cento sulle merci provenienti dall'Unione Europea, dalla Cina e da altri dodici paesi, alimenta il timore di tassi di interesse elevati piu a lungo. In campo geopolitico si registrano nuove tensioni in Medio Oriente con attacchi Houthi su Riyadh e l'annuncio della Polonia di voler creare una no-fly zone al confine ucraino. Nel mercato dei cambi, l'euro dollaro risente delle minacce commerciali, mantenendo il biglietto verde ben supportato. Passando all'analisi del portafoglio globale e dei listini azionari, assistiamo a un pesante ritracciamento a Wall Street, dove l'indice Nasdaq cento ha registrato cali superiori al tre per cento. La correzione colpisce in modo particolare i colossi dei semiconduttori come Nvidia e Dell, i cui eccellenti risultati non bastano a rassicurare gli investitori sulle valutazioni correnti. In Europa i listini chiudono in territorio negativo, con Milano che cede lo zero virgola nove per cento appesantita da banche e chip, mentre Parigi riesce a fare eccezione chiudendo a piu zero virgola quarantacinque per cento grazie alla tenuta dei comparti del lusso e dell'automobile. Per quanto riguarda l'oro e le materie prime, il metallo prezioso mostra una leggera contrazione a causa del rafforzamento del dollaro e dell'incertezza sui tassi, ma registra continui acquisti da parte delle banche centrali sui livelli di ribasso, confermando la sua funzione di copertura strategica di lungo termine. Il petrolio registra un incremento a ottantadue virgola trentatre dollari al barile sulla scia degli attacchi ucraini alle raffinerie russe e dell'instabilita nel Mar Rosso. Sui mercati emergenti prevale la cautela: la prospettiva di dazi statunitensi piu severi pesa sulle prospettive di crescita dell'Asia e della Cina. Allo stesso tempo si segnalano sviluppi interessanti in Africa con l'imminente quotazione a Lagos della Dangote Refinery, destinata a diventare la maggiore offerta pubblica iniziale del continente. Concludiamo con un rapido sguardo all'Italia. Piazza Affari chiude in calo dello zero virgola nove per cento risentendo della debolezza del comparto bancario europeo e dei semiconduttori. Da segnalare sul fronte dell'internazionalizzazione l'accordo siglato a San Paolo tra Assolombarda e Italcam per sostenere l'export e gli investimenti italiani in Brasile. Per oggi e tutto, vi auguro una buona giornata e buon lavoro."
+  },
+  {
     "date": "2026-11-24",
     "date_label": "24/11/2026",
     "audio_path": "audio/2026-11-24.mp3",
