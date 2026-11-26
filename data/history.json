@@ -1,5 +1,133 @@
 [
   {
+    "date": "2026-11-26",
+    "date_label": "26/11/2026",
+    "audio_path": "audio/2026-11-26.mp3",
+    "day_headline": "I listini europei rimbalzano trascinati dal tech mentre l'oro frena",
+    "market_sentiment": "Misto",
+    "active_sources": [
+      "Il Sole 24 Ore - Finanza",
+      "Il Sole 24 Ore - Economia",
+      "ANSA Economia",
+      "ANSA Mondo & Geopolitica",
+      "Reuters Business",
+      "Bloomberg Markets",
+      "Financial Times",
+      "Morningstar",
+      "CNBC Top News",
+      "MarketWatch Top Stories",
+      "Oro & Commodities",
+      "Investing.com Italia"
+    ],
+    "slides": [
+      {
+        "category": "Tema del Giorno",
+        "headline": "Rimbalzo globale guidato dai semiconduttori e dall'intelligenza artificiale",
+        "key_takeaway": "Il ritorno degli acquisti sul comparto tecnologico sostiene l'azionario globale, sebbene permangano tensioni geopolitiche e pressioni sui tassi.",
+        "bullets": [
+          "I mercati globali recuperano terreno dopo le recenti forti oscillazioni sui titoli legati all'intelligenza artificiale",
+          "Le esportazioni di semiconduttori superano per la prima volta petrolio e gas nel 2026",
+          "L'Europa registra un generale rimbalzo delle borse in assenza del faro di Wall Street"
+        ],
+        "sources": [
+          "Bloomberg Markets",
+          "CNBC Top News",
+          "Il Sole 24 Ore - Finanza"
+        ]
+      },
+      {
+        "category": "Macro, Tassi & Geopolitica",
+        "headline": "Banche centrali divise sull'inflazione e transizione al vertice della Bce",
+        "key_takeaway": "Il dollaro resta forte mentre i banchieri centrali dibattono sulle cause dell'inflazione e sulle future mosse di politica monetaria.",
+        "bullets": [
+          "Pablo Hernandez de Cos designato alla successione di Christine Lagarde alla guida della Banca Centrale Europea",
+          "I policymaker della Federal Reserve divisi sulle reali cause della persistenza inflazionistica",
+          "Il gas naturale si mantiene sopra gli 87 euro sul Ttf di Amsterdam a causa del freddo e delle tensioni in Medio Oriente"
+        ],
+        "sources": [
+          "Financial Times",
+          "Reuters Business",
+          "ANSA Economia"
+        ]
+      },
+      {
+        "category": "Azionario Globale",
+        "headline": "Piazze sviluppate in ripresa con focus sulla resilienza americana ed europea",
+        "key_takeaway": "La stabilità dei listini sviluppati offre un contesto favorevole ai portafogli core, pur in presenza di volatilità selettiva.",
+        "bullets": [
+          "L'Europa archivia una seduta positiva guidata dai listini tecnologici",
+          "Piazza Affari registra performance di rilievo trainata dai titoli a maggiore intensità innovativa",
+          "I fondi mantengono un approccio prudente orientato alla preservazione del capitale"
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Bloomberg Markets",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "Rotazione & Focus Settori",
+        "headline": "Tecnologia e semiconduttori al centro della rotazione, criticità per le compagnie aeree",
+        "key_takeaway": "La forte domanda di potenza di calcolo continua a premiare il settore tech, mentre pesanti nuvole gravano sul settore trasporti aerei.",
+        "bullets": [
+          "Norse Atlantic Airways in grave crisi finanziaria e vicina al collasso",
+          "Il settore dei semiconduttori beneficia strutturalmente del boom dell'intelligenza artificiale",
+          "Raffica di acquisti su Prysmian a Piazza Affari grazie a nuove maxi-commesse in Grecia"
+        ],
+        "sources": [
+          "Reuters Business",
+          "Investing.com Italia",
+          "CNBC Top News"
+        ]
+      },
+      {
+        "category": "Oro & Materie Prime",
+        "headline": "L'oro frena sotto la pressione dei dati macro e delle attese sui tassi",
+        "key_takeaway": "I beni rifugio subiscono correzioni di breve termine, sebbene la domanda strutturale delle banche centrali rimanga solida.",
+        "bullets": [
+          "I prezzi dell'oro registrano flessioni a causa dei dati macroeconomici statunitensi",
+          "Le banche centrali dei mercati emergenti continuano strategicamente a convertire riserve fiat in oro",
+          "Il petrolio segna un lieve rialzo mentre la domanda di diesel in Europa mostra segnali di rallentamento"
+        ],
+        "sources": [
+          "Oro & Commodities",
+          "Bloomberg Markets",
+          "Il Sole 24 Ore - Finanza"
+        ]
+      },
+      {
+        "category": "Mercati Emergenti",
+        "headline": "India e Asia resilienti, la Nigeria interviene per stabilizzare la valuta",
+        "key_takeaway": "I mercati emergenti asiatici confermano la propria forza relativa, mentre le banche centrali locali gestiscono le tensioni valutarie.",
+        "bullets": [
+          "Le azioni indiane registrano una marcia costante verso il miglior mese degli ultimi sei anni",
+          "La Banca Centrale della Nigeria aumenta la fornitura di dollari retail per frenare la volatilità della naira",
+          "Stati Uniti intensificano i controlli sulle esportazioni di chip avanzati verso il sud-est asiatico"
+        ],
+        "sources": [
+          "Reuters Business",
+          "Bloomberg Markets",
+          "Financial Times"
+        ]
+      },
+      {
+        "category": "Focus Italia",
+        "headline": "Piazza Affari in luce con lo spread in calo e fermento industriale",
+        "key_takeaway": "Il mercato italiano beneficia del clima europeo favorevole, con rendimenti dei BTP stabili e focus sui grandi player industriali.",
+        "bullets": [
+          "Lo spread Btp-Bund scende a 110 punti base con rendimento decennale in leggero movimento",
+          "UniCredit e Stmicroelectronics al centro dell'attenzione degli investitori a Milano",
+          "L'economia reale punta sulla live communication e sui consumi fuoricasa in forte espansione"
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Il Sole 24 Ore - Economia"
+        ]
+      }
+    ],
+    "podcast_script": "Buongiorno e benvenuti al nostro consueto appuntamento mattutino con il briefing finanziario. Le principali testate consultate oggi per voi includono Il Sole ventiquattro ore Finanza ed Economia, Ansa Economia e Mondo, Reuters Business, Bloomberg Markets, Financial Times, Morningstar, Cnbc, MarketWatch, Oro e Commodities e Investing punto com Italia. Apriamo la nostra analisi con la macro evidenza del giorno, ovvero il ritorno in grande stile degli acquisti sul comparto tecnologico e dei semiconduttori a livello globale. Le esportazioni di chip hanno superato per la prima volta nel corso di quest'anno il settore energetico tradizionale, confermando come la domanda legata all'intelligenza artificiale stia ridisegnando le gerarchie industriali e sostenendo i listini azionari nonostante le recenti turbolenze. Passando al quadro macroeconomico, dei tassi e della geopolitica, registriamo importanti novità istituzionali in Europa con la designazione di Pablo Hernandez de Cos alla successione di Christine Lagarde alla guida della Banca Centrale Europea. Dall'altra parte dell'oceano, i banchieri della Federal Reserve mantengono posizioni distinte sulle reali cause della persistenza inflazionistica, mentre sul fronte energetico il gas naturale resta sopra gli ottantasette euro ad Amsterdam, sostenuto da previsioni di freddo intenso e dalle tensioni in Medio Oriente. Sul fronte dell'azionario globale, le borse europee hanno archiviato una seduta di deciso rimbalzo in assenza del faro di Wall Street, chiusa per il Giorno del Ringraziamento. Analizzando la rotazione e i singoli settori, assistiamo a una polarizzazione netta: da un lato il comparto tech e della difesa continuano ad attrarre flussi consistenti, mentre emergono forti criticità operative per alcune compagnie aeree, come nel caso di Norse Atlantic Airways, vicina al collasso finanziario. Per quanto riguarda le materie prime e i beni rifugio, l'oro registra una fase di flessione frenato dalle attese sui tassi di interesse statunitensi, sebbene la domanda strutturale da parte delle banche centrali dei mercati emergenti rimanga solida. Spostandoci proprio sui mercati emergenti, l'India mostra una resilienza eccezionale avviandosi verso il miglior mese degli ultimi sei anni, mentre in Africa la Banca Centrale della Nigeria interviene attivamente per stabilizzare la valuta locale. Chiudiamo la nostra analisi con un focus sull'Italia: Piazza Affari si distingue positivamente grazie al buon momento dei titoli tecnologici e industriali come Stmicroelectronics e Prysmian. Lo spread tra Btp e Bund scende a centodieci punti base, confermando la tenuta del debito sovrano italiano in un contesto europeo costruttivo. Vi auguro una buona giornata e un proficuo trading."
+  },
+  {
     "date": "2026-11-25",
     "date_label": "25/11/2026",
     "audio_path": "audio/2026-11-25.mp3",
