@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-11-27",
+    "date_label": "27/11/2026",
+    "audio_path": "audio/2026-11-27.mp3",
+    "day_headline": "Rimbalzo del tech e volatilità sui mercati globali",
+    "market_sentiment": "Misto",
+    "active_sources": [
+      "Il Sole 24 Ore - Finanza",
+      "Il Sole 24 Ore - Economia",
+      "ANSA Economia",
+      "ANSA Mondo & Geopolitica",
+      "Reuters Business",
+      "Bloomberg Markets",
+      "Financial Times",
+      "Morningstar",
+      "CNBC Top News",
+      "MarketWatch Top Stories",
+      "Oro & Commodities",
+      "Investing.com Italia"
+    ],
+    "slides": [
+      {
+        "category": "1. Tema del Giorno",
+        "headline": "Rimbalzo del comparto tech dopo la correzione di Wall Street",
+        "key_takeaway": "La volatilità sull'intelligenza artificiale offre occasioni d'acquisto mantenendo cautela nella gestione di portafoglio.",
+        "bullets": [
+          "Futures sul Nasdaq in solido rialzo grazie agli acquisti sui titoli tecnologici pesantemente venduti.",
+          "L'indice S&P 500 resta in fase di correzione a causa delle recenti vendite di novembre.",
+          "Il dollaro continua la sua corsa rialzista posizionandosi sui massimi per la richiesta di asset rifugio."
+        ],
+        "sources": [
+          "Bloomberg Markets",
+          "Financial Times",
+          "CNBC Top News",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "2. Macro, Tassi & Geopolitica",
+        "headline": "Dollaro in rafforzamento e scontro sul bilancio dell'Unione Europea",
+        "key_takeaway": "La forza del dollaro suggerisce cautela sulla componente valutaria del portafoglio globale.",
+        "bullets": [
+          "Banca Centrale Europea: intesa dei 27 Paesi su De Cos, ma restano divisioni sul bilancio comunitario.",
+          "Inflazione core a Tokyo ai massimi da 16 mesi spinge verso un imminente rialzo dei tassi BOJ.",
+          "Il dollaro americano continua la striscia positiva più lunga dal 2024 per tassi elevati e avversione al rischio."
+        ],
+        "sources": [
+          "ANSA Economia",
+          "ANSA Mondo & Geopolitica",
+          "Bloomberg Markets",
+          "Reuters Business"
+        ]
+      },
+      {
+        "category": "3. Azionario Globale",
+        "headline": "Borse europee in recupero e tentativi di riscatto a Wall Street",
+        "key_takeaway": "I mercati sviluppati europei offrono una parziale copertura difensiva rispetto alle oscillazioni americane.",
+        "bullets": [
+          "Listini azionari europei in territorio positivo trainati dal rimbalzo del settore tecnologico.",
+          "Vendite di nuove case negli Stati Uniti toccano il massimo del 2026 grazie agli sconti dei costruttori.",
+          "Analisti valutano i mercati di Regno Unito ed Europa come rifugi dalla volatilità dell'AI."
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Bloomberg Markets",
+          "Financial Times",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "4. Rotazione & Focus Settori",
+        "headline": "Altalena nei titoli tecnologici e forte ribasso del gas naturale",
+        "key_takeaway": "E opportuno bilanciare l'esposizione tra tecnologici ad alta volatilità e comparti ciclici stabili.",
+        "bullets": [
+          "Il titolo Nvidia e i giganti dell'AI guidano l'intensa volatilità degli indici americani.",
+          "Prezzo del gas naturale ad Amsterdam in netto calo verso la soglia di 82 euro al megawattora.",
+          "Vendite di nuove case e promozioni per il Black Friday sostengono consumi e immobiliare in USA."
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Financial Times",
+          "CNBC Top News",
+          "MarketWatch Top Stories"
+        ]
+      },
+      {
+        "category": "5. Oro & Materie Prime",
+        "headline": "Oro in ripiegamento sotto 3500 dollari per vendite della Russia",
+        "key_takeaway": "La debolezza temporanea dell'oro costituisce un'opportunità di accumulo graduale nel medio termine.",
+        "bullets": [
+          "Prezzo dell'oro sceso sotto quota 3.500 dollari l'oncia con HSBC che avverte di un possibile test a 3.400.",
+          "Pressore ribassista dovuta alle vendite della Russia per 72 tonnellate in dieci mesi consecutivi.",
+          "Banca Centrale Turca sospende gli acquisti di oro di produzione nazionale.",
+          "Bernstein e i mercati fisici di Cina e India mantengono una visione rialzista verso il 2027."
+        ],
+        "sources": [
+          "Oro & Commodities",
+          "Investing.com Italia"
+        ]
+      },
+      {
+        "category": "6. Mercati Emergenti",
+        "headline": "Azioni cinesi in forte rialzo grazie al sostegno dei fondi statali",
+        "key_takeaway": "L'intervento statale a Pechino offre supporto tattico agli emergenti pur in presenza di dollaro forte.",
+        "bullets": [
+          "Indice CSI 300 registra il maggior rialzo giornaliero degli ultimi due anni dopo le sollecitazioni di Pechino.",
+          "Il governo cinese richiama la national team di investitori per stabilizzare i mercati azionari.",
+          "Brasile: il presidente di Bradesco Trabuco accetta la nomina a ministro delle finanze.",
+          "Banca d'Indonesia mantiene la priorità sulla stabilità della rupia e sul controllo dell'inflazione."
+        ],
+        "sources": [
+          "Reuters Business",
+          "Financial Times",
+          "Bloomberg Markets",
+          "Morningstar"
+        ]
+      },
+      {
+        "category": "7. Focus Italia",
+        "headline": "Piazza Affari positiva con focus su fiscalità e investimenti industriali",
+        "key_takeaway": "Il clima di rassicurazione fiscale e industriale sostiene la stabilità dei titoli italiani.",
+        "bullets": [
+          "Borsa Italiana in rialzo sulla scia del recupero generale dei listini europei.",
+          "Confindustria riceve rassicurazioni dal ministro Giorgetti sulla gestione dei crediti e sul Superbonus.",
+          "Jindal incrementa la proposta di investimenti per l'ex Ilva salendo a 7,5 miliardi di euro."
+        ],
+        "sources": [
+          "Il Sole 24 Ore - Finanza",
+          "Il Sole 24 Ore - Economia",
+          "ANSA Economia"
+        ]
+      }
+    ],
+    "podcast_script": "Buongiorno e benvenuti al briefing finanziario di oggi, ventisette novembre duemilaventisei. Oggi abbiamo analizzato per voi le ultime notizie provenienti da Il Sole Ventiquattr'Ore Finanza ed Economia, Ansa Economia e Geopolitica, Reuters Business, Bloomberg Markets, Financial Times, Morningstar, CNBC Top News, MarketWatch, Oro e Commodities e Investing punto com Italia. La macro evidenza che domina la giornata è rappresentata dalla forte volatilità nel settore tecnologico e legato all'intelligenza artificiale. Dopo le recenti correzioni che hanno spinto l'indice S and P cinquecento in fase di correzione tecnica, stiamo assistendo a un deciso rientro dei compratori sui ribassi a Wall Street e in Europa, mentre il dollaro americano continua a viaggiare su livelli record. Passando al quadro macroeconomico e geopolitico, l'Unione Europea ha trovato un intesa sulla nomina dello spagnolo De Cos nel comitato esecutivo della Banca Centrale Europea, ma restano forti divisioni tra i Paesi membri sul bilancio comunitario e sui finanziamenti. A Tokyo, l'inflazione core ha raggiunto i massimi da sedici mesi, rafforzando l'ipotesi di un imminente rialzo dei tassi da parte della Banca del Giappone. Sul fronte valutario, l'euro dollaro resta sotto pressione per la costante forza del biglietto verde, alimentata dalla domanda di asset rifugio e dai tassi elevati. Per quanto riguarda l'azionario globale dei mercati sviluppati, i listini europei proseguono il loro recupero trainati dal settore tecnologico. Diversi analisti evidenziano come i mercati europei e britannici possano offrire un rifugio difensivo rispetto alle marcate oscillazioni del mercato americano. Nell'analisi dei settori, oltre alle altalene dei semiconduttori e dei grandi nomi della tecnologia, si registra un forte ribasso del gas naturale ad Amsterdam verso quota ottantadue euro al megawattora, mentre negli Stati Uniti le vendite di nuove case hanno toccato i massimi dell'anno grazie agli sconti dei costruttori e alla stagione del Black Friday. Spostandoci su oro e mercati emergenti, il metallo prezioso ha subito un ripiegamento scendendo sotto i tremilacinquecento dollari l'oncia, appesantito dalle vendite di settantadue tonnellate da parte della Russia e dalla pausa degli acquisti della banca centrale turca. Tuttavia, i dati sul mercato fisico in Cina e India e le stime di Bernstein mantengono intatta la struttura rialzista verso il duemilaventisette. Negli emergenti spicca il forte balzo delle borse cinesi: l'indice CSI trecento ha messo a segno il maggior rialzo giornaliero degli ultimi due anni a seguito degli inviti del governo ai fondi statali per stabilizzare i listini. Da segnalare inoltre la nomina del nuovo ministro delle finanze in Brasile e la fermezza della Banca d'Indonesia nel tutelare la rupia. Concludiamo con un rapido passaggio sull'Italia. Piazza Affari prosegue la seduta in territorio positivo. Sul fronte economico e industriale arrivano segnali distensivi dalle rassicurazioni del Ministero dell'Economia a Confindustria sui crediti del Superbonus, mentre sul dossier ex Ilva il gruppo Jindal ha rilanciato portando gli investimenti previsti a sette miliardi e mezzo di euro. Vi auguro una buona giornata e un buon proseguimento di lavoro."
+  },
+  {
     "date": "2026-11-26",
     "date_label": "26/11/2026",
     "audio_path": "audio/2026-11-26.mp3",
